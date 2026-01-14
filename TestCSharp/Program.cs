@@ -15,7 +15,7 @@ public class Dog : ISound, IMovable
 {
     public void MakeSound()
     {
-        Console.WriteLine("The dog barks loud.");
+        Console.WriteLine("The dog barks very loud.");
     }
 
     public void Move()
