@@ -11,5 +11,9 @@
 
 // Note: After refactoring, the Application class will require ILogger and IDataAccess
 // instances to be passed into its constructor.
-var app = new Application();
+var logger = new ConsoleLogger();
+var dataAccess = new DatabaseAccess();
+
+// Inject the dependencies into the Application class.
+var app = new Application(logger, dataAccess);
 app.Run();

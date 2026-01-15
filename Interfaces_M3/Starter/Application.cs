@@ -7,16 +7,13 @@ public class Application
     // interfaces, then refactor the Application constructor
     // to accept them as parameters.
 
-    private readonly ConsoleLogger _logger;
-    private readonly DatabaseAccess _dataAccess;
+    private readonly ILogger _logger;
+    private readonly IDataAccess _dataAccess;
 
-    // This constructor for the Application class instantiates
-    // the ConsoleLogger and DatabaseAccess classes directly,
-    // creating tight coupling.
-    public Application()
+    public Application(ILogger logger, IDataAccess dataAccess)
     {
-        _logger = new ConsoleLogger();
-        _dataAccess = new DatabaseAccess();
+        _logger = logger;
+        _dataAccess = dataAccess;
     }
 
     // Runs the application logic.

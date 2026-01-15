@@ -1,9 +1,7 @@
 // TASK 5: Refactor the code to use an ILogger interface.
-
-// *This class is responsible for logging messages to the console.
-// *Currently, it is tightly coupled to the Application class.
-// *In this exercise, you will refactor the code to use an ILogger interface.
-public class ConsoleLogger
+// This class implements the ILogger interface and is responsible for 
+// logging messages to the console.
+public class ConsoleLogger : ILogger
 {
     // Logs a message to the console.
     public void Log(string message)
@@ -11,3 +9,4 @@ public class ConsoleLogger
         Console.WriteLine($"ConsoleLogger: {message}");
     }
 }
+
