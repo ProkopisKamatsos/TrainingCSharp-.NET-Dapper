@@ -43,7 +43,7 @@ public class Library
         }
         else
         {
-            Console.WriteLine("The item is not available.");
+            Console.WriteLine("The item isn't available.");
         }
     }
 }
