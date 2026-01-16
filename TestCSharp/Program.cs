@@ -62,7 +62,7 @@ public class BorrowableDVD : IBorrowable
         if (IsAvailable)
         {
             IsAvailable = false;
-            Console.WriteLine($"You have borrowed  DVD \"{Title}\".");
+            Console.WriteLine($"You have borrowed the DVD \"{Title}\".");
         }
         else
         {
