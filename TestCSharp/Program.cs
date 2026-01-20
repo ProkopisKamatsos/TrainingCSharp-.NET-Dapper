@@ -1,95 +1,18 @@
-﻿public interface IBorrowable
+﻿int result = Fibonacci(5);
+Console.WriteLine(result);
+
+static int Fibonacci(int n)
 {
-    bool IsAvailable { get; }
-    void Borrow();
-}
-public class BorrowableBook : IBorrowable
-{
-    public string Title { get; set; }
-    public bool IsAvailable { get; private set; } = true;
+    int n1 = 0;
+    int n2 = 1;
+    int sum;
 
-    public BorrowableBook(string title)
+    for (int i = 2; i < n; i++)
     {
-        Title = title;
+        sum = n1 + n2;
+        n1 = n2;
+        n2 = sum;
     }
 
-    public void Borrow()
-    {
-        if (IsAvailable)
-        {
-            IsAvailable = false;
-            Console.WriteLine($"You have borrowed \"{Title}\".");
-        }
-        else
-        {
-            Console.WriteLine($"\"{Title}\" is already borrowed.");
-        }
-    }
-}
-public class Library
-{
-    private IBorrowable _item;
-
-    public Library(IBorrowable item)
-    {
-        _item = item;
-    }
-
-    public void BorrowItem()
-    {
-        if (_item.IsAvailable)
-        {
-            _item.Borrow();
-        }
-        else
-        {
-            Console.WriteLine("The item isn't available.");
-        }
-    }
-}
-public class BorrowableDVD : IBorrowable
-{
-    public string Title { get; set; }
-    public bool IsAvailable { get; private set; } = true;
-
-    public BorrowableDVD(string title)
-    {
-        Title = title;
-    }
-
-    public void Borrow()
-    {
-        if (IsAvailable)
-        {
-            IsAvailable = false;
-            Console.WriteLine($"You have borrowed the DVD \"{Title}\".");
-        }
-        else
-        {
-            Console.WriteLine($"The DVD \"{Title}\" is already borrowed.");
-        }
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        // Create borrowable items
-        IBorrowable book = new BorrowableBook("Adventure Works Cycles");
-        IBorrowable dvd = new BorrowableDVD("Graphic Design Institute");
-
-        // Create libraries
-        Library bookLibrary = new Library(book);
-        Library dvdLibrary = new Library(dvd);
-
-        // Borrow items
-        bookLibrary.BorrowItem();
-        bookLibrary.BorrowItem(); // Try borrowing again
-
-        Console.WriteLine();
-
-        dvdLibrary.BorrowItem();
-        dvdLibrary.BorrowItem(); // Try borrowing again
-    }
+    return n == 0 ? n1 : n2;
 }
