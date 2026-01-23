@@ -1,18 +1,36 @@
-﻿int result = Fibonacci(5);
-Console.WriteLine(result);
+﻿using Dapper;
+using Microsoft.Data.SqlClient;
+using TestCSharp;
 
-static int Fibonacci(int n)
+public class Program
 {
-    int n1 = 0;
-    int n2 = 1;
-    int sum;
-
-    for (int i = 2; i < n; i++)
+    public static void Main(string[] args)
     {
-        sum = n1 + n2;
-        n1 = n2;
-        n2 = sum;
-    }
+        var connectionString =
+            "Server=localhost\\SQLEXPRESS;Database=DapperTrain;Trusted_Connection=True;TrustServerCertificate=True;";
 
-    return n == 0 ? n1 : n2;
+        using (var connection = new SqlConnection(connectionString))
+        {
+            string sql = "SELECT * FROM Users WHERE Id = @Id";
+
+            Console.WriteLine("Type the Id:");
+
+            if (!int.TryParse(Console.ReadLine(), out int id))
+            {
+                Console.WriteLine("Invalid Id");
+                return;
+            }
+
+            var user = connection.QueryFirst<User>(sql, new { Id = id });
+
+            if (user != null)
+            {
+                Console.WriteLine(user.Username);
+            }
+            else
+            {
+                Console.WriteLine("User not found");
+            }
+        }
+    }
 }
