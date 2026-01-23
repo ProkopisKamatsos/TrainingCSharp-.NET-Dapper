@@ -17,7 +17,7 @@ public class Program
 
             if (!int.TryParse(Console.ReadLine(), out int id))
             {
-                Console.WriteLine("Invalid Id");
+                Console.WriteLine("Invalid Id.");
                 return;
             }
 
