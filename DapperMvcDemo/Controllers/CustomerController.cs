@@ -201,7 +201,7 @@ namespace DapperMvcDemo.Controllers
             {
                 // Παίρνουμε τους 3 τελευταίους
                 var customersToRemove = connection.Query<Customer>(
-                    "SELECT TOP 3 * FROM dbo.Customers ORDER BY CustomerID DESC"
+                    "SELECT  * FROM dbo.Customers WHERE CustomerID >50 AND CustomerID < 58 ORDER BY CustomerID DESC"
                 ).ToList();
 
                 connection.BulkDelete(customersToRemove);
@@ -210,7 +210,7 @@ namespace DapperMvcDemo.Controllers
             return RedirectToAction("Index");
         }
         // GET: Customer/BulkMergeDemo
-        pudblic IActionResult BulkMergeDemo()
+        public IActionResult BulkMergeDemo()
         {
             DapperPlusMapping.EnsureMapped();
 
