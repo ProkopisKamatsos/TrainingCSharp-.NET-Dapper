@@ -73,7 +73,7 @@ public class EmployeeService
             throw new Exception("Employee not found");
 
         if (!employee.IsActive)
-            throw new Exception("Employee is already inactive");
+            throw new Exception("Employee is already inactive.");
 
         _employeeRepository.SoftDelete(id);
     }
