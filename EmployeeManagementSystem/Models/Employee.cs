@@ -15,7 +15,10 @@ namespace EmployeeManagementSystem.Models
         public decimal Salary { get; set; }
         public DateTime HireDate { get; set; }
         public bool IsActive { get; set; } = true;
-        
+        public Department? Department { get; set; }
+        public List<ProjectAssignment> ProjectAssignments { get; set; } = new();
+
+
 
     }
 }

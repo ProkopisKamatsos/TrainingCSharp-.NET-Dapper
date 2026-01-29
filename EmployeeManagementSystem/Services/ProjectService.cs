@@ -31,7 +31,6 @@ public class ProjectService
         if (project.Budget < 0)
             throw new Exception("Budget cannot be negative");
 
-        // EndDate μπορεί να είναι null. Αν υπάρχει, ας είναι >= StartDate
         if (project.EndDate.HasValue && project.EndDate.Value.Date < project.StartDate.Date)
             throw new Exception("EndDate cannot be before StartDate");
 

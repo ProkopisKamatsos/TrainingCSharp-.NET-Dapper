@@ -74,5 +74,36 @@ public class EmployeeService
 
         _employeeRepository.SoftDelete(id);
     }
+    public List<Employee> SearchEmployees(EmployeeSearchCriteria criteria)
+    {
+        if (criteria.SalaryFrom.HasValue && criteria.SalaryTo.HasValue)
+        {
+            if (criteria.SalaryFrom.Value > criteria.SalaryTo.Value)
+                throw new Exception("SalaryFrom cannot be greater than SalaryTo");
+        }
+
+        return _employeeRepository.Search(criteria);
+    }
+    public Employee GetEmployeeWithDepartmentById(int id)
+    {
+        if (id <= 0)
+            throw new Exception("Invalid employee Id");
+
+        var employee = _employeeRepository.GetEmployeeWithDepartmentById(id);
+        if (employee == null)
+            throw new Exception("Employee not found");
+
+        return employee;
+    }
+    public Employee GetEmployeeWithProjectsById(int id)
+    {
+        if (id <= 0) throw new Exception("Invalid employee Id");
+
+        var emp = _employeeRepository.GetEmployeeWithProjectsById(id);
+        if (emp is null) throw new Exception("Employee not found");
+
+        return emp;
+    }
+
 
 }

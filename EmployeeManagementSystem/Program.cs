@@ -12,12 +12,15 @@ var employeeService = new EmployeeService(employeeRepo, departmentRepo);
 var departmentService = new DepartmentService(departmentRepo, employeeRepo);
 var projectRepo = new ProjectRepository(factory);
 var projectService = new ProjectService(projectRepo);
+var employeeProjectRepo = new EmployeeProjectRepository(factory);
+var employeeProjectService = new EmployeeProjectService(employeeRepo, projectRepo, employeeProjectRepo);
+
 
 while (true)
 {
     Console.WriteLine();
     Console.WriteLine("1. List all employees");
-    Console.WriteLine("2. Find employee by ID");
+    Console.WriteLine("2. Find employee and dept by ID");
     Console.WriteLine("3. Create employee");
     Console.WriteLine("4. Update an existing employee");
     Console.WriteLine("5. Delete (deactivate) an employee");
@@ -30,6 +33,9 @@ while (true)
     Console.WriteLine("12. Find project by ID");
     Console.WriteLine("13. Update project");
     Console.WriteLine("14. Delete project");
+    Console.WriteLine("15. Search employee by filters");
+    Console.WriteLine("17. Assign employee to project");
+    Console.WriteLine("18. View employee with projects"); 
     Console.WriteLine("0. Exit");
 
     Console.Write("Choose: ");
@@ -57,19 +63,23 @@ while (true)
                 Console.Write("Employee Id: ");
                 int.TryParse(Console.ReadLine(), out int employeeId);
 
-                var employee = employeeRepo.GetById(employeeId);
+                try
+                {
+                    var employee = employeeService.GetEmployeeWithDepartmentById(employeeId);
 
-                if (employee == null)
-                {
-                    Console.WriteLine("Employee not found");
+                    Console.WriteLine($"{employee.Id} - {employee.FirstName} {employee.LastName}");
+                    Console.WriteLine($"Email: {employee.Email}");
+                    Console.WriteLine($"Salary: {employee.Salary}");
+                    Console.WriteLine($"Department: {employee.Department?.Name} | Location: {employee.Department?.Location}");
                 }
-                else
+                catch (Exception ex)
                 {
-                    Console.WriteLine($"{employee.Id} - {employee.FirstName} {employee.LastName} - {employee.Email}");
+                    Console.WriteLine($"Error: {ex.Message}");
                 }
 
                 break;
             }
+
 
         case "3":
             {
@@ -404,6 +414,109 @@ while (true)
 
                 break;
             }
+        case "15":
+            {
+                Console.Write("Name (optional): ");
+                var name = Console.ReadLine();
+
+                Console.Write("Department Id (optional, empty to skip): ");
+                var deptInput = Console.ReadLine();
+                int? deptId = null;
+                if (!string.IsNullOrWhiteSpace(deptInput) && int.TryParse(deptInput, out var d))
+                    deptId = d;
+
+                Console.Write("Salary From (optional, empty to skip): ");
+                var fromInput = Console.ReadLine();
+                decimal? salaryFrom = null;
+                if (!string.IsNullOrWhiteSpace(fromInput) && decimal.TryParse(fromInput, out var from))
+                    salaryFrom = from;
+
+                Console.Write("Salary To (optional, empty to skip): ");
+                var toInput = Console.ReadLine();
+                decimal? salaryTo = null;
+                if (!string.IsNullOrWhiteSpace(toInput) && decimal.TryParse(toInput, out var to))
+                    salaryTo = to;
+
+                var criteria = new EmployeeSearchCriteria
+                {
+                    Name = string.IsNullOrWhiteSpace(name) ? null : name,
+                    DepartmentId = deptId,
+                    SalaryFrom = salaryFrom,
+                    SalaryTo = salaryTo
+                };
+
+                try
+                {
+                    var results = employeeService.SearchEmployees(criteria);
+
+                    if (results.Count == 0)
+                    {
+                        Console.WriteLine("No employees found");
+                    }
+                    else
+                    {
+                        foreach (var e in results)
+                            Console.WriteLine($"{e.Id} - {e.FirstName} {e.LastName} - Dept:{e.DepartmentId} - Salary:{e.Salary}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+
+                break;
+            }
+        case "17":
+            {
+                Console.Write("Employee Id: ");
+                int.TryParse(Console.ReadLine(), out var empId);
+
+                Console.Write("Project Id: ");
+                int.TryParse(Console.ReadLine(), out var projId);
+                Console.Write("Role: ");
+                var role = Console.ReadLine();
+
+                try
+                {
+                    employeeProjectService.AssignEmployeeToProject(empId, projId, role ?? "");
+                    Console.WriteLine("Assigned successfully");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+                break;
+            }
+        case "18":
+            {
+                Console.Write("Employee Id: ");
+                int.TryParse(Console.ReadLine(), out var empId);
+
+                var emp = employeeRepo.GetEmployeeWithProjectsById(empId);
+
+                if (emp is null)
+                {
+                    Console.WriteLine("Employee not found");
+                    break;
+                }
+
+                Console.WriteLine($"{emp.Id} - {emp.FirstName} {emp.LastName}");
+
+                if (emp.ProjectAssignments.Count == 0)
+                {
+                    Console.WriteLine("No projects assigned");
+                }
+                else
+                {
+                    Console.WriteLine("Projects:");
+                    foreach (var a in emp.ProjectAssignments)
+                        Console.WriteLine($"- {a.Project.Id}: {a.Project.Name} (Role: {a.Role})");
+                }
+
+                break;
+            }
+
+
 
         default:
             Console.WriteLine("Invalid option");
