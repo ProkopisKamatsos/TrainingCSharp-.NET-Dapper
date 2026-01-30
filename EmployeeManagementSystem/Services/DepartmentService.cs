@@ -17,6 +17,10 @@ public class DepartmentService
     {
         return _departmentRepo.GetAll();
     }
+    public async Task<List<Department>> GetAllDepartmentsAsync()
+    {
+        return await _departmentRepo.GetAllAsync();
+    }
 
     public Department CreateDepartment(Department department)
     {
@@ -31,6 +35,16 @@ public class DepartmentService
         department.Location ??= "";
 
         return _departmentRepo.Insert(department);
+    }
+    public async Task<Department> CreateDepartmentAsync(Department department)
+    {
+        if (string.IsNullOrWhiteSpace(department.Name))
+            throw new Exception("Department name is required");
+        department.Name = department.Name.Trim();
+        if (await _departmentRepo.ExistsByNameAsync(department.Name))
+            throw new Exception("Department name already exists");
+        department.Location ??= "";
+        return await _departmentRepo.InsertAsync(department);
     }
     public Department UpdateDepartment(Department department)
     {
@@ -52,7 +66,21 @@ public class DepartmentService
 
         return _departmentRepo.Update(department);
     }
-
+    public async Task<Department> UpdateDepartmentAsync(Department department)
+    {
+        if (department.Id <= 0)
+            throw new Exception("Invalid department Id");
+        var existing = await _departmentRepo.GetByIdAsync(department.Id);
+        if (existing is null)
+            throw new Exception("Department not found");
+        if (string.IsNullOrWhiteSpace(department.Name))
+            throw new Exception("Department name is required");
+        department.Name = department.Name.Trim();
+        department.Location ??= "";
+        if (await _departmentRepo.ExistsByNameAsync(department.Name, department.Id))
+            throw new Exception("Department name already exists");
+        return await _departmentRepo.UpdateAsync(department);
+    }
     public void DeleteDepartment(int id)
     {
         if (id <= 0)
@@ -67,6 +95,17 @@ public class DepartmentService
 
         _departmentRepo.Delete(id);
     }
+    public async Task DeleteDepartmentAsync(int id)
+    {
+        if (id <= 0)
+            throw new Exception("Invalid department Id");
+        var dept = await _departmentRepo.GetByIdAsync(id);
+        if (dept is null)
+            throw new Exception("Department not found");
+        if (await _employeeRepo.AnyInDepartmentAsync(id))
+            throw new Exception("Cannot delete department because it has active employees");
+        await _departmentRepo.DeleteAsync(id);
+    }
     public DepartmentTotals GetDepartmentTotalsById(int departmentId)
     {
         if (departmentId <= 0)
@@ -79,6 +118,15 @@ public class DepartmentService
 
         return totals;
     }
+    public async Task<DepartmentTotals> GetDepartmentTotalsByIdAsync(int departmentId)
+    {
+        if (departmentId <= 0)
+            throw new ArgumentException("Invalid department id.");
+        var totals = await _departmentRepo.GetDepartmentTotalsByIdAsync(departmentId);
+        if (totals == null)
+            throw new Exception("Department not found.");
+        return totals;
+    }
     public DepartmentTotals GetDepartmentTotalsById_StoredProcedure(int departmentId)
     {
         if (departmentId <= 0)
@@ -89,6 +137,15 @@ public class DepartmentService
         if (totals == null)
             throw new Exception("Department not found.");
 
+        return totals;
+    }
+    public async Task<DepartmentTotals> GetDepartmentTotalsById_StoredProcedureAsync(int departmentId)
+    {
+        if (departmentId <= 0)
+            throw new ArgumentException("Invalid department id.");
+        var totals = await _departmentRepo.GetDepartmentTotalsById_SPAsync(departmentId);
+        if (totals == null)
+            throw new Exception("Department not found.");
         return totals;
     }
 

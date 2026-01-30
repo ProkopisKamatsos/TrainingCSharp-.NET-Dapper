@@ -51,7 +51,7 @@ while (true)
     {
         case "1":
             {
-                var employees = employeeRepo.GetAll();
+                var employees = await employeeRepo.GetAllAsync();
 
                 foreach (var e in employees)
                 {
@@ -68,7 +68,7 @@ while (true)
 
                 try
                 {
-                    var employee = employeeService.GetEmployeeWithDepartmentById(employeeId);
+                    var employee = await employeeService.GetEmployeeWithDepartmentByIdAsync(employeeId);
 
                     Console.WriteLine($"{employee.Id} - {employee.FirstName} {employee.LastName}");
                     Console.WriteLine($"Email: {employee.Email}");
@@ -114,7 +114,8 @@ while (true)
 
                 try
                 {
-                    var createdEmployee = employeeService.CreateEmployee(employee);
+                    var createdEmployee = await employeeService.CreateEmployeeAsync(employee);
+
                     Console.WriteLine($"Employee created with Id: {createdEmployee.Id}");
                 }
                 catch (Exception ex)
@@ -177,7 +178,7 @@ while (true)
 
                 try
                 {
-                    employeeService.DeleteEmployee(id);
+                    await employeeService.DeleteEmployeeAsync(id);
                     Console.WriteLine("Employee deactivated successfully");
                 }
                 catch (Exception ex)
@@ -208,7 +209,7 @@ while (true)
 
                 try
                 {
-                    var created = departmentService.CreateDepartment(department);
+                    var created = await departmentService.CreateDepartmentAsync(department);
                     Console.WriteLine($"Department created: {created.Id} - {created.Name}");
                 }
                 catch (Exception ex)
@@ -221,7 +222,7 @@ while (true)
 
         case "7":
             {
-                var departments = departmentService.GetAllDepartments();
+                var departments = await departmentService.GetAllDepartmentsAsync();
 
                 if (departments.Count == 0)
                 {
@@ -242,7 +243,7 @@ while (true)
 
         case "8":
             {
-                var departments = departmentService.GetAllDepartments();
+                var departments = await departmentService.GetAllDepartmentsAsync();
                 foreach (var d in departments)
                     Console.WriteLine($"{d.Id} - {d.Name}");
 
@@ -268,7 +269,7 @@ while (true)
 
                 try
                 {
-                    var updated = departmentService.UpdateDepartment(dept);
+                    var updated = await departmentService.UpdateDepartmentAsync(dept);
                     Console.WriteLine($"Department updated: {updated.Id} - {updated.Name}");
                 }
                 catch (Exception ex)
@@ -286,7 +287,7 @@ while (true)
 
                 try
                 {
-                    departmentService.DeleteDepartment(deptId);
+                    await departmentService.DeleteDepartmentAsync(deptId);
                     Console.WriteLine("Department deleted successfully");
                 }
                 catch (Exception ex)
@@ -323,7 +324,7 @@ while (true)
 
                 try
                 {
-                    var created = projectService.CreateProject(project);
+                    var created = await projectService.CreateProjectAsync(project);
                     Console.WriteLine($"Project created: {created.Id} - {created.Name}");
                 }
                 catch (Exception ex)
@@ -335,7 +336,7 @@ while (true)
             }
         case "11":
             {
-                var projects = projectService.GetAllProjects();
+                var projects = await projectService.GetAllProjectsAsync();
                 if (projects.Count == 0)
                 {
                     Console.WriteLine("No projects found");
@@ -352,7 +353,7 @@ while (true)
                 Console.Write("Project Id: ");
                 int.TryParse(Console.ReadLine(), out var id);
 
-                var project = projectService.GetProjectById(id);
+                var project = await projectService.GetProjectByIdAsync(id);
                 if (project is null)
                     Console.WriteLine("Project not found");
                 else
@@ -391,7 +392,7 @@ while (true)
 
                 try
                 {
-                    var updated = projectService.UpdateProject(project);
+                    var updated = await projectService.UpdateProjectAsync(project);
                     Console.WriteLine($"Project updated: {updated.Id} - {updated.Name}");
                 }
                 catch (Exception ex)
@@ -408,7 +409,7 @@ while (true)
 
                 try
                 {
-                    projectService.DeleteProject(id);
+                    await projectService.DeleteProjectAsync(id);
                     Console.WriteLine("Project deleted successfully");
                 }
                 catch (Exception ex)
@@ -451,7 +452,7 @@ while (true)
 
                 try
                 {
-                    var results = employeeService.SearchEmployees(criteria);
+                    var results = await employeeService.SearchEmployeesAsync(criteria);
 
                     if (results.Count == 0)
                     {
@@ -481,7 +482,7 @@ while (true)
 
                 try
                 {
-                    var t = departmentService.GetDepartmentTotalsById(deptId);
+                    var t = await departmentService.GetDepartmentTotalsByIdAsync(deptId);
 
                     Console.WriteLine("Department Totals:");
                     Console.WriteLine($"ID: {t.DepartmentId}");
@@ -514,7 +515,7 @@ while (true)
 
                 try
                 {
-                    employeeProjectService.AssignEmployeeToProject(empId, projId, role ?? "");
+                    await employeeProjectService.AssignEmployeeToProjectAsync(empId, projId, role ?? "");
                     Console.WriteLine("Assigned successfully");
                 }
                 catch (Exception ex)
@@ -528,7 +529,7 @@ while (true)
                 Console.Write("Employee Id: ");
                 int.TryParse(Console.ReadLine(), out var empId);
 
-                var emp = employeeRepo.GetEmployeeWithProjectsById(empId);
+                var emp = await employeeRepo.GetEmployeeWithProjectsByIdAsync(empId);
 
                 if (emp is null)
                 {
@@ -562,7 +563,7 @@ while (true)
 
                 try
                 {
-                    var t = departmentService.GetDepartmentTotalsById_StoredProcedure(deptId);
+                    var t = await departmentService.GetDepartmentTotalsById_StoredProcedureAsync(deptId);
 
                     Console.WriteLine("Department Totals (Stored Procedure):");
                     Console.WriteLine($"ID: {t.DepartmentId}");
@@ -598,7 +599,7 @@ while (true)
 
                 try
                 {
-                    employeeService.UpdateEmployeeSalary(empId, newSalary);
+                    await employeeService.UpdateEmployeeSalaryAsync(empId, newSalary);
                     Console.WriteLine("Salary updated successfully (transaction committed).");
                 }
                 catch (Exception ex)
@@ -608,11 +609,6 @@ while (true)
 
                 break;
             }
-
-
-
-
-
         default:
             Console.WriteLine("Invalid option");
             break;
