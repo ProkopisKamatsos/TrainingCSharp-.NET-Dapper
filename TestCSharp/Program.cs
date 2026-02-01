@@ -1,9 +1,15 @@
-﻿var product1 = new Product("Laptop", 1200m);
-var product2 = new Product("Laptop", 1200m);
-var product3 = new Product("Tablet", 600m);
-Console.WriteLine($"Are product1 and product2 equal? {product1 == product2}");
-Console.WriteLine($"Are product1 and product3 equal? {product1 == product3}");
-public record Product(string Name, decimal Price);
+﻿var products = new[] {
+    new { Name = "Laptop", Price = 1200 },
+    new { Name = "Tablet", Price = 600 }
+};
 
+var filteredProducts = from p in products
+                       where p.Price > 1000
+                       select new { p.Name, p.Price };
 
-
+foreach (var p in filteredProducts)
+{
+    Console.WriteLine($"Name: {p.Name}, Price: {p.Price}");
+}
+// Output:
+// Name: Laptop, Price: 1200
