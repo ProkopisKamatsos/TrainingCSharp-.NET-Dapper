@@ -1,42 +1,38 @@
-﻿public static partial class Program
+﻿public delegate int CompareCustomers(Customer c1, Customer c2);
+public class TestClass
 {
-    public static void Main()
+    static void Main()
     {
-        HandleThree();
-    }
+        Random random = new Random();
+        List<Customer> customers = new List<Customer>();
 
-    public static void HandleThree()
-    {
-        var task = Task.Run(
-            () => throw new CustomException("This exception is expected!"));
-
-        try
+        // Create 10 customers with random ages and IDs
+        for (int i = 0; i < 10; i++)
         {
-            task.Wait();
+            string customerId = random.Next(10000000, 99999999).ToString();
+            int age = random.Next(30, 51); // Random age between 30 and 50
+            customers.Add(new Customer(customerId, age));
         }
-        catch (AggregateException ae)
+
+        // Define the CompareCustomers delegate
+        CompareCustomers compare = (c1, c2) => c2.Age.CompareTo(c1.Age);
+        customers.Sort((c1, c2) => compare(c1, c2));
+
+        // Print sorted customers
+        foreach (var customer in customers)
         {
-            foreach (var ex in ae.InnerExceptions)
-            {
-                // Χειρισμός της προσαρμοσμένης εξαίρεσης.
-                if (ex is CustomException)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                // Επανεκτόξευση οποιασδήποτε άλλης εξαίρεσης.
-                else
-                {
-                    throw ex;
-                }
-            }
+            Console.WriteLine($"ID: {customer.CustomerId}, Age: {customer.Age}");
         }
     }
 }
-
-// Ορισμός της κλάσης CustomException
-public class CustomException : Exception
+public class Customer
 {
-    public CustomException(string message) : base(message) { }
+    public string CustomerId { get; set; }
+    public int Age { get; set; }
+
+    public Customer(string custId, int age)
+    {
+        CustomerId = custId;
+        Age = age;
+    }
 }
-// Το παράδειγμα εμφανίζει την ακόλουθη έξοδο:
-//        This exception is expected!
