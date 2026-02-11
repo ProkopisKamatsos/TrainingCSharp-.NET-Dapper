@@ -2,21 +2,13 @@
 
 namespace TaskManagementAPI.DTOs;
 
-public class UserDto
+public class UpdateUserWithCredentialsDto
 {
-    public int Id { get; set; }  // για responses (π.χ. Get user)
-
-    [Required]
-    [StringLength(50)]
-    public string Username { get; set; } = null!;
-
     [Required]
     [EmailAddress]
     public string Email { get; set; } = null!;
 
-    // Για REGISTER / LOGIN input
     [Required]
-    [MinLength(6)]
     public string Password { get; set; } = null!;
 
     [StringLength(50)]

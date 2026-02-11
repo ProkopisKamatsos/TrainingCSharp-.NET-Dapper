@@ -14,16 +14,16 @@ namespace TaskManagementAPI.Models
     {
         public int Id { get; set; }
 
-        public string Title { get; set; } = null!;         // NOT NULL
-        public string? Description { get; set; }           // NULL
+        public string Title { get; set; } = null!;         
+        public string? Description { get; set; }           
 
-        public TaskStatus Status { get; set; }             // NOT NULL (stored as string in DB)
-        public int Priority { get; set; }                  // NOT NULL
-        public int UserId { get; set; }                    // NOT NULL
+        public TaskStatus Status { get; set; }             
+        public int Priority { get; set; }                  
+        public int UserId { get; set; }                    
 
-        public DateTime? DueDate { get; set; }             // NULL
-        public DateTime CreatedAt { get; set; }            // default in DB
-        public DateTime UpdatedAt { get; set; }            // default in DB
-        public DateTime? CompletedAt { get; set; }         // NULL
+        public DateTime? DueDate { get; set; }             
+        public DateTime CreatedAt { get; set; }            
+        public DateTime UpdatedAt { get; set; }            
+        public DateTime? CompletedAt { get; set; }        
     }
 }
