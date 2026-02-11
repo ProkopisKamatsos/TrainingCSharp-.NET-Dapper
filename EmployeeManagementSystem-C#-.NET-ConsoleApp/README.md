@@ -1,4 +1,4 @@
-# Employee Management System (Major Practice Project)
+# Employee Management System 
 
 ## 📌 Overview
 
