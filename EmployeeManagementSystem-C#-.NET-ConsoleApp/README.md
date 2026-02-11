@@ -1,4 +1,4 @@
-# Employee Management System (Major Practice Project)
+# Employee Management System 
 
 ## 📌 Overview
 
@@ -56,11 +56,4 @@ The main goals of this project are to:
 
 ---
 
-## ⚙️ Features
-
-- Create, read, update, and deactivate employees
-- Manage departments
-- Manage projects
-- Assign employees to projects
-- View employees with department details
-- Interactive console-based menu
+## ⚙️ Features - Create, read, update, and deactivate employees - Manage departments - Manage projects - Assign employees to projects - View employees with department details - Interactive console-based menu
