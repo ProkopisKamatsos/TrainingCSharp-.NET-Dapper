@@ -4,8 +4,7 @@ namespace TaskManagementAPI.DTOs;
 
 public class UserDto
 {
-    public int Id { get; set; }  // για responses (π.χ. Get user)
-
+    public int Id { get; set; }  
     [Required]
     [StringLength(50)]
     public string Username { get; set; } = null!;
