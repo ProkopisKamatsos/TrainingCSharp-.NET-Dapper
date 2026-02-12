@@ -4,15 +4,15 @@
     {
         public int Id { get; set; }
 
-        public string Username { get; set; } = null!;      // NOT NULL
-        public string Email { get; set; } = null!;         // NOT NULL
-        public string PasswordHash { get; set; } = null!;  // NOT NULL
+        public string Username { get; set; } = null!;      
+        public string Email { get; set; } = null!;         
+        public string PasswordHash { get; set; } = null!;  
 
-        public string? FirstName { get; set; }             // NULL
-        public string? LastName { get; set; }              // NULL
+        public string? FirstName { get; set; }            
+        public string? LastName { get; set; }              
 
-        public DateTime CreatedAt { get; set; }            // default in DB
-        public DateTime UpdatedAt { get; set; }            // default in DB
-        public bool IsActive { get; set; }                 // default in DB
+        public DateTime CreatedAt { get; set; }            
+        public DateTime UpdatedAt { get; set; }           
+        public bool IsActive { get; set; }                 
     }
 }

@@ -16,21 +16,21 @@ public class TaskService : ITaskService
 
     public async Task<(bool Success, string? Error, int StatusCode, int? TaskId)> CreateAsync(CreateTaskDto dto)
     {
-        // 1) Trim + empty title check
+       
         dto.Title = dto.Title.Trim();
         if (string.IsNullOrWhiteSpace(dto.Title))
             return (false, "Title cannot be empty", 400, null);
 
-        // 2) DueDate cannot be in the past (business rule)
+       
         if (dto.DueDate.HasValue && dto.DueDate.Value < DateTime.UtcNow)
             return (false, "DueDate cannot be in the past", 400, null);
 
-        // 3) FK check: user exists
+        
         var user = await _users.GetByIdAsync(dto.UserId);
         if (user == null)
             return (false, "User not found", 404, null);
 
-        // 4) CompletedAt logic
+        
         DateTime? completedAt = null;
         if (dto.Status == "Completed")
             completedAt = DateTime.UtcNow;
@@ -44,23 +44,18 @@ public class TaskService : ITaskService
         => _tasks.GetByIdAsync(id);
     public async Task<(bool Success, string? Error, int StatusCode)> UpdateAsync(int id, UpdateTaskDto dto)
     {
-        // Trim title
+        
         dto.Title = dto.Title.Trim();
         if (string.IsNullOrWhiteSpace(dto.Title))
             return (false, "Title cannot be empty", 400);
 
-        // DueDate rule
         if (dto.DueDate.HasValue && dto.DueDate.Value < DateTime.UtcNow)
             return (false, "DueDate cannot be in the past", 400);
 
-        // Check task exists (και παίρνουμε το current status)
         var existing = await _tasks.GetByIdAsync(id);
         if (existing == null)
             return (false, "Task not found", 404);
 
-        // CompletedAt logic:
-        // - If status is Completed => set now
-        // - Else => null
         DateTime? completedAt = dto.Status == "Completed" ? DateTime.UtcNow : null;
 
         var ok = await _tasks.UpdateAsync(id, dto, completedAt);
@@ -71,7 +66,6 @@ public class TaskService : ITaskService
     }
     public async Task<(bool Success, string? Error, int StatusCode)> DeleteAsync(int id)
     {
-        // (optional) existence check first, but not required
         var ok = await _tasks.DeleteAsync(id);
 
         if (!ok)

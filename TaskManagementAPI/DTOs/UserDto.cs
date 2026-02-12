@@ -4,7 +4,7 @@ namespace TaskManagementAPI.DTOs;
 
 public class UserDto
 {
-    public int Id { get; set; }  // για responses (π.χ. Get user)
+    public int Id { get; set; } 
 
     [Required]
     [StringLength(50)]
@@ -14,7 +14,6 @@ public class UserDto
     [EmailAddress]
     public string Email { get; set; } = null!;
 
-    // Για REGISTER / LOGIN input
     [Required]
     [MinLength(6)]
     public string Password { get; set; } = null!;

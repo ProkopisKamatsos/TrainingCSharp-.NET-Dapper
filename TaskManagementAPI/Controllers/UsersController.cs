@@ -49,7 +49,7 @@ public class UsersController : ControllerBase
         if (user == null)
             return NotFound();
 
-        // Δεν επιστρέφουμε PasswordHash
+       
         return Ok(new
         {
             user.Id,

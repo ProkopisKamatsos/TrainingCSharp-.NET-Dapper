@@ -125,11 +125,11 @@ public class TasksController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
-        // Task exists
+        
         var task = await _service.GetByIdAsync(taskId);
         if (task == null) return NotFound("Task not found");
 
-        // User exists
+        
         var user = await _users.GetByIdAsync(dto.UserId);
         if (user == null) return NotFound("User not found");
 
