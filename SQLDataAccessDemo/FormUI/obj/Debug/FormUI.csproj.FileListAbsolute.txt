@@ -1,0 +1,13 @@
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\bin\Debug\FormUI.exe.config
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\bin\Debug\FormUI.exe
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\bin\Debug\FormUI.pdb
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\bin\Debug\Dapper.dll
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\bin\Debug\Dapper.xml
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.csproj.AssemblyReference.cache
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.Dashboard.resources
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.Properties.Resources.resources
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.csproj.GenerateResource.cache
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.csproj.CoreCompileInputs.cache
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.csproj.Up2Date
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.exe
+C:\Users\Kamatsos\Downloads\SQLDataAccessDemos\SQLDataAccessDemo\SQLDataAccessDemo\FormUI\obj\Debug\FormUI.pdb

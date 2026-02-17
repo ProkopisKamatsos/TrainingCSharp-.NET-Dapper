@@ -1,0 +1,14 @@
+{
+  "$id": "1",
+  "CustomerId": "0012152831",
+  "FirstName": "Staffan",
+  "LastName": "Bergqvist",
+  "AccountNumbers": {
+    "$id": "2",
+    "$values": [
+      11761688,
+      11761689,
+      11761690
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\bin\Debug\net10.0\JSON SerializeDeserializeEX.exe
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\bin\Debug\net10.0\JSON SerializeDeserializeEX.deps.json
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\bin\Debug\net10.0\JSON SerializeDeserializeEX.runtimeconfig.json
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\bin\Debug\net10.0\JSON SerializeDeserializeEX.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\bin\Debug\net10.0\JSON SerializeDeserializeEX.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.AssemblyInfoInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.AssemblyInfo.cs
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.csproj.CoreCompileInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.sourcelink.json
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\refint\JSON SerializeDeserializeEX.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\JSON SerializeDeserializeEX.genruntimeconfig.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\JSON SerializeDeserializeEX\obj\Debug\net10.0\ref\JSON SerializeDeserializeEX.dll

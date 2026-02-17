@@ -1,0 +1,15 @@
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\bin\Debug\net10.0\QuerySyntaxLINQ.exe
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\bin\Debug\net10.0\QuerySyntaxLINQ.deps.json
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\bin\Debug\net10.0\QuerySyntaxLINQ.runtimeconfig.json
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\bin\Debug\net10.0\QuerySyntaxLINQ.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\bin\Debug\net10.0\QuerySyntaxLINQ.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.AssemblyInfoInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.AssemblyInfo.cs
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.csproj.CoreCompileInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.sourcelink.json
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\refint\QuerySyntaxLINQ.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\QuerySyntaxLINQ.genruntimeconfig.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\QuerySyntaxLINQ\obj\Debug\net10.0\ref\QuerySyntaxLINQ.dll

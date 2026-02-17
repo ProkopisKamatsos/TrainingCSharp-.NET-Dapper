@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\todoapicontrollers\\todoapicontrollers\\todoapicontrollers.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|solutionrelative:todoapicontrollers\\todoapicontrollers.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\todoapicontrollers\\todoapicontrollers\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|solutionrelative:todoapicontrollers\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\todoapicontrollers\\todoapicontrollers\\models\\todoitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|solutionrelative:todoapicontrollers\\models\\todoitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\todoapicontrollers\\todoapicontrollers\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|solutionrelative:todoapicontrollers\\controllers\\todoitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\todoapicontrollers\\todoapicontrollers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|solutionrelative:todoapicontrollers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\todoapicontrollers\\todoapicontrollers\\models\\todocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{069DE38E-7943-4DB7-9DAC-18DDF12F2C8A}|TodoApiControllers\\TodoApiControllers.csproj|solutionrelative:todoapicontrollers\\models\\todocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoItemDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Models\\TodoItemDTO.cs",
+              "RelativeDocumentMoniker": "TodoApiControllers\\Models\\TodoItemDTO.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Models\\TodoItemDTO.cs",
+              "RelativeToolTip": "TodoApiControllers\\Models\\TodoItemDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T15:44:08.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoApiControllers.http",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\TodoApiControllers.http",
+              "RelativeDocumentMoniker": "TodoApiControllers\\TodoApiControllers.http",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\TodoApiControllers.http",
+              "RelativeToolTip": "TodoApiControllers\\TodoApiControllers.http",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-02-10T15:25:57.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TodoItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Controllers\\TodoItemsController.cs",
+              "RelativeDocumentMoniker": "TodoApiControllers\\Controllers\\TodoItemsController.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Controllers\\TodoItemsController.cs",
+              "RelativeToolTip": "TodoApiControllers\\Controllers\\TodoItemsController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAuwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T15:21:52.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TodoItem.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Models\\TodoItem.cs",
+              "RelativeDocumentMoniker": "TodoApiControllers\\Models\\TodoItem.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Models\\TodoItem.cs",
+              "RelativeToolTip": "TodoApiControllers\\Models\\TodoItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T15:16:22.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TodoContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Models\\TodoContext.cs",
+              "RelativeDocumentMoniker": "TodoApiControllers\\Models\\TodoContext.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Models\\TodoContext.cs",
+              "RelativeToolTip": "TodoApiControllers\\Models\\TodoContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T15:16:57.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Program.cs",
+              "RelativeDocumentMoniker": "TodoApiControllers\\Program.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TodoApiControllers\\TodoApiControllers\\Program.cs",
+              "RelativeToolTip": "TodoApiControllers\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-10T15:17:52.937Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

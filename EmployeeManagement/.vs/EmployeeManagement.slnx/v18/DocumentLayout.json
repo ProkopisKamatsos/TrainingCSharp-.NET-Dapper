@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B5DF4C-5DE9-DB12-AD2E-A715ABE07F8C}|EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\employeemanagement\\employeemanagement.tests\\employeemanagement.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A1B5DF4C-5DE9-DB12-AD2E-A715ABE07F8C}|EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj|solutionrelative:employeemanagement.tests\\employeemanagement.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0562E3-D4AF-3320-F651-D4EC03EEE541}|EmployeeManagement.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\employeemanagement\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0562E3-D4AF-3320-F651-D4EC03EEE541}|EmployeeManagement.csproj|solutionrelative:calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0562E3-D4AF-3320-F651-D4EC03EEE541}|EmployeeManagement.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\employeemanagement\\employeemanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AB0562E3-D4AF-3320-F651-D4EC03EEE541}|EmployeeManagement.csproj|solutionrelative:employeemanagement.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AB0562E3-D4AF-3320-F651-D4EC03EEE541}|EmployeeManagement.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\employeemanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AB0562E3-D4AF-3320-F651-D4EC03EEE541}|EmployeeManagement.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B5DF4C-5DE9-DB12-AD2E-A715ABE07F8C}|EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\employeemanagement\\employeemanagement.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B5DF4C-5DE9-DB12-AD2E-A715ABE07F8C}|EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj|solutionrelative:employeemanagement.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeManagement.Tests",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj",
+              "RelativeDocumentMoniker": "EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj",
+              "RelativeToolTip": "EmployeeManagement.Tests\\EmployeeManagement.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-16T12:07:56.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeManagement",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\EmployeeManagement.csproj",
+              "RelativeDocumentMoniker": "EmployeeManagement.csproj",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\EmployeeManagement.csproj",
+              "RelativeToolTip": "EmployeeManagement.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-16T12:07:43.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T12:07:36.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\EmployeeManagement.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\EmployeeManagement.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "EmployeeManagement.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T12:04:30.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculator.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\Calculator.cs",
+              "RelativeDocumentMoniker": "Calculator.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\EmployeeManagement\\Calculator.cs",
+              "RelativeToolTip": "Calculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T12:03:43.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
