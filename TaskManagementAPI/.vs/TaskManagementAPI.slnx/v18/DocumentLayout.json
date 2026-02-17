@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD12E949-D3F8-2171-725C-D206CE8B3C00}|TaskManagementAPI.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\taskmanagementapi\\repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD12E949-D3F8-2171-725C-D206CE8B3C00}|TaskManagementAPI.csproj|solutionrelative:repositories\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD12E949-D3F8-2171-725C-D206CE8B3C00}|TaskManagementAPI.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\taskmanagementapi\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD12E949-D3F8-2171-725C-D206CE8B3C00}|TaskManagementAPI.csproj|solutionrelative:services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD12E949-D3F8-2171-725C-D206CE8B3C00}|TaskManagementAPI.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\taskmanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD12E949-D3F8-2171-725C-D206CE8B3C00}|TaskManagementAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\Repositories\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ITaskRepository.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\Repositories\\ITaskRepository.cs",
+              "RelativeToolTip": "Repositories\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T09:45:25.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "Services\\TaskService.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\Services\\TaskService.cs",
+              "RelativeToolTip": "Services\\TaskService.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T09:42:02.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\TaskManagementAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T17:45:45.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

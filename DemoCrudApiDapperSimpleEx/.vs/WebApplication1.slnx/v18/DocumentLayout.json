@@ -1,0 +1,251 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:services\\todoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\services\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:services\\itodoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\repository\\itodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:repository\\itodorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\repository\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:repository\\todorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\data\\updatetododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:data\\updatetododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\data\\tododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:data\\tododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\data\\createtododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:data\\createtododto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|c:\\users\\kamatsos\\vsc\\csharpprojects\\webapplication1\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19317912-AC4B-45A3-1276-85453B678B5B}|WebApplication1.csproj|solutionrelative:models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateTodoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\UpdateTodoDTO.cs",
+              "RelativeDocumentMoniker": "Data\\UpdateTodoDTO.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\UpdateTodoDTO.cs",
+              "RelativeToolTip": "Data\\UpdateTodoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T15:26:46.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITodoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Repository\\ITodoRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ITodoRepository.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Repository\\ITodoRepository.cs",
+              "RelativeToolTip": "Repository\\ITodoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:55:46.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TodoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Repository\\TodoRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TodoRepository.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Repository\\TodoRepository.cs",
+              "RelativeToolTip": "Repository\\TodoRepository.cs",
+              "ViewState": "AgIAAD8AAACAmZmZmZkrwEwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:30:48.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITodoService.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Services\\ITodoService.cs",
+              "RelativeDocumentMoniker": "Services\\ITodoService.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Services\\ITodoService.cs",
+              "RelativeToolTip": "Services\\ITodoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T13:00:37.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TodoService.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Services\\TodoService.cs",
+              "RelativeDocumentMoniker": "Services\\TodoService.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Services\\TodoService.cs",
+              "RelativeToolTip": "Services\\TodoService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:55:10.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Controllers\\TodoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodoController.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Controllers\\TodoController.cs",
+              "RelativeToolTip": "Controllers\\TodoController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAIwDkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:30:18.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TodoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\TodoDTO.cs",
+              "RelativeDocumentMoniker": "Data\\TodoDTO.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\TodoDTO.cs",
+              "RelativeToolTip": "Data\\TodoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:29:39.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateTodoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\CreateTodoDTO.cs",
+              "RelativeDocumentMoniker": "Data\\CreateTodoDTO.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\CreateTodoDTO.cs",
+              "RelativeToolTip": "Data\\CreateTodoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T15:26:53.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:20:00.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": ".cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\.cs",
+              "RelativeDocumentMoniker": "Data\\.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\.cs",
+              "RelativeToolTip": "Data\\.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T13:23:00.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\DbContext.cs",
+              "RelativeDocumentMoniker": "Data\\DbContext.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Data\\DbContext.cs",
+              "RelativeToolTip": "Data\\DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:34:49.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-15T12:33:45.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Todo.cs",
+              "DocumentMoniker": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Models\\Todo.cs",
+              "RelativeDocumentMoniker": "Models\\Todo.cs",
+              "ToolTip": "C:\\Users\\Kamatsos\\VSC\\CSharpProjects\\WebApplication1\\Models\\Todo.cs",
+              "RelativeToolTip": "Models\\Todo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-15T12:28:18.451Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

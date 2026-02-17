@@ -1,0 +1,15 @@
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\bin\Debug\net10.0\LINQmoreOperators.exe
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\bin\Debug\net10.0\LINQmoreOperators.deps.json
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\bin\Debug\net10.0\LINQmoreOperators.runtimeconfig.json
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\bin\Debug\net10.0\LINQmoreOperators.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\bin\Debug\net10.0\LINQmoreOperators.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.AssemblyInfoInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.AssemblyInfo.cs
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.csproj.CoreCompileInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.sourcelink.json
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\refint\LINQmoreOperators.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\LINQmoreOperators.genruntimeconfig.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\LINQmoreOperators\obj\Debug\net10.0\ref\LINQmoreOperators.dll

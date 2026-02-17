@@ -1,0 +1,15 @@
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\bin\Debug\net9.0\ImplementInterfaces.exe
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\bin\Debug\net9.0\ImplementInterfaces.deps.json
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\bin\Debug\net9.0\ImplementInterfaces.runtimeconfig.json
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\bin\Debug\net9.0\ImplementInterfaces.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\bin\Debug\net9.0\ImplementInterfaces.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.AssemblyInfoInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.AssemblyInfo.cs
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.sourcelink.json
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\refint\ImplementInterfaces.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ImplementInterfaces.genruntimeconfig.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\Implement Interfaces in a Project\obj\Debug\net9.0\ref\ImplementInterfaces.dll

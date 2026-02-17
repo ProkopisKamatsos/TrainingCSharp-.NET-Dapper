@@ -1,0 +1,41 @@
+@TodoApiControllers_HostAddress = https://localhost:7208
+
+@id=1
+GET {{TodoApiControllers_HostAddress}}/api/todoitems/{{id}}
+Accept: application/json
+
+###
+
+@TodoApi_HostAddress = https://localhost:7260
+
+Post {{TodoApiControllers_HostAddress}}/api/todoitems
+Content-Type: application/json
+
+{
+  "name": "flying dog",
+  "isComplete": true,
+  "secret":"this"
+}
+
+###
+
+###
+
+GET {{TodoApiControllers_HostAddress}}/api/todoitems
+
+###
+@id=1
+PUT {{TodoApiControllers_HostAddress}}/api/todoitems/{{id}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed fish",
+  "isComplete": false
+}
+
+###
+@id=1
+DELETE {{TodoApiControllers_HostAddress}}/api/todoitems/{{id}}
+
+###

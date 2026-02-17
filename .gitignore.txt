@@ -1,0 +1,19 @@
+# Build artifacts
+**/bin/
+**/obj/
+
+# Visual Studio
+**/.vs/
+*.user
+*.suo
+
+# Optional: traces/db files that εμφανίζονται σε σένα
+*.dbtrace
+*.vsp
+*.vspx
+*.vsidx
+
+# Binaries
+*.dll
+*.exe
+*.pdb

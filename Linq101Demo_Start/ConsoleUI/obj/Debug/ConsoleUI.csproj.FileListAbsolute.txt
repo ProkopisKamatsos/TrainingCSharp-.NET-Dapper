@@ -1,0 +1,10 @@
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\bin\Debug\ConsoleUI.exe
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\bin\Debug\ConsoleUI.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\bin\Debug\LinqLibrary.dll
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\bin\Debug\LinqLibrary.pdb
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\obj\Debug\ConsoleUI.csproj.AssemblyReference.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\obj\Debug\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\obj\Debug\ConsoleUI.csproj.Up2Date
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\obj\Debug\ConsoleUI.exe
+C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\ConsoleUI\obj\Debug\ConsoleUI.pdb
