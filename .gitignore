@@ -1,0 +1,18 @@
+# Visual Studio / workspace
+.vs/
+**/.vs/
+FileContentIndex/
+v17/
+v18/
+*.slnx.sqlite
+VSWorkspaceState.json
+*.vsuo
+*.vswuo
+*.user
+*.suo
+
+# Build artifacts
+bin/
+obj/
+**/bin/
+**/obj/
