@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="EmployeeManagement.csproj" />
-  <Project Path="EmployeeManagement.Tests/EmployeeManagement.Tests.csproj" />
-</Solution>

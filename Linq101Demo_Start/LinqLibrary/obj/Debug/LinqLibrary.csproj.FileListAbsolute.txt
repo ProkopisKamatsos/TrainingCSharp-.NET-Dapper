@@ -1,6 +1,0 @@
-C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\LinqLibrary\bin\Debug\LinqLibrary.dll
-C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\LinqLibrary\bin\Debug\LinqLibrary.pdb
-C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\LinqLibrary\obj\Debug\LinqLibrary.csproj.AssemblyReference.cache
-C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\LinqLibrary\obj\Debug\LinqLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\LinqLibrary\obj\Debug\LinqLibrary.dll
-C:\Users\Kamatsos\VSC\CSharpProjects\Linq101Demo_Start\LinqLibrary\obj\Debug\LinqLibrary.pdb
