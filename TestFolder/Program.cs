@@ -1,32 +1,34 @@
-﻿Random random = new Random();
-int level = random.Next(0,55);
-string[] words = { "Admin", "Manager" };
-int index = random.Next(words.Length);
-string permission= words[index];
+﻿try
+{
+    Process1();
+}
+catch
+{
+    Console.WriteLine("An exception has occurred");
+}
 
-if (permission.Contains("Admin"))
+Console.WriteLine("Exit program");
+
+static void Process1()
 {
-    if (level > 55)
+    try
     {
-        Console.WriteLine("Welcome, Super Admin user.");
+        WriteMessage();
     }
-    else
+    catch
     {
-        Console.WriteLine("Welcome, Admin user.");
+        Console.WriteLine("Exception caught in Process1");
     }
+
 }
-else if (permission.Contains("Manager"))
+
+static void WriteMessage()
 {
-    if (level >= 20)
-    {
-        Console.WriteLine("Contact an Admin for access.");
-    }
-    else
-    {
-        Console.WriteLine("You do not have sufficient privileges.");
-    }
-}
-else
-{
-    Console.WriteLine("You do not have sufficient privileges.");
+    double float1 = 3000.0;
+    double float2 = 0.0;
+    int number1 = 3000;
+    int number2 = 0;
+
+    Console.WriteLine(float1 / float2);
+    Console.WriteLine(number1 / number2);
 }
