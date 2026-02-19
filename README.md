@@ -1,4 +1,4 @@
-# 🚀 C# Training Repository
+# 🚀 .NET Training Repository
 
 ## 📚 About This Repository
 
