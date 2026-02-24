@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../UtilityLibraries/StringLibrary/StringLibrary.csproj" />
+  <Project Path="PrimeService.Tests/PrimeService.Tests.csproj" />
+  <Project Path="PrimeService/PrimeService.csproj" />
+</Solution>

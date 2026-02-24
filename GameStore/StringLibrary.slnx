@@ -1,4 +1,3 @@
 <Solution>
   <Project Path="../ClassLibraryProjects/StringLibrary/StringLibrary.csproj" />
-  <Project Path="GameStore.Api/GameStore.Api.csproj" />
 </Solution>
