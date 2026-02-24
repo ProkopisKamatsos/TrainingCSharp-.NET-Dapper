@@ -1,20 +1,20 @@
 GET http://localhost:5134/games
 ###
-GET http://localhost:5134/games/1
+GET http://localhost:5134/games/3
 ###
 POST http://localhost:5134/games
 Content-Type: application/json
 
 {
 
-    "name": "Super Mario",
-    "genre": "Playfom",
+    "name": "Street crazytaxi",
+    "genreId": 3,
     "price": 19.99,
     "releaseDate": "2023-10-20"
 
 }
 ###
-PUT http://localhost:5134/games/1
+PUT http://localhost:5134/games/5
 Content-Type: application/json
 
 {
@@ -25,4 +25,6 @@ Content-Type: application/json
     
 }
 ###
-DELETE http://localhost:5134/games/1
+DELETE http://localhost:5134/games/6
+###
+GET http://localhost:5134/genres
