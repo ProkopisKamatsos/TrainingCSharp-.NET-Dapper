@@ -18,9 +18,11 @@ The purpose of this repository is to **learn by doing**, improve my problem-solv
 - 🔹 **[EmployeeManagementSystem – Console App](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/EmployeeManagementSystem-C%23-.NET-ConsoleApp)**  
   Console-based employee management system built with C# and .NET.
 
+- 🔹 **[TestedEmployeeManagementSystem](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/TestedEmployeeManagementSystem)**  
+  Console-based Employee Management System with **full unit test coverage**, focusing on **Service and Repository testing** using **xUnit**, **Moq**, and **in-memory fake repositories** (no database dependency).
+
 - 🔹 **[TaskManagementAPI](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/TaskManagementAPI)**  
   RESTful Web API for managing tasks using ASP.NET Core.
-
 ---
 
 ## 🎯 Learning Objectives
