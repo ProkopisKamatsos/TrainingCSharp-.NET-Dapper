@@ -44,6 +44,6 @@ public class CommentRepository : ICommentRepository
 
         using var conn = _db.CreateConnection();
         var rows = await conn.ExecuteAsync(sql, new { Id = id });
-        return rows > 0;
+        return rows > 0; 
     }
 }
