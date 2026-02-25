@@ -60,6 +60,7 @@ Through this repository, I aim to:
 - **.NET / .NET Core**
 - **ASP.NET Core / Web API**
 - **Blazor**
+- **UnitTesting**
 - **ADO.NET & Dapper**
 - **SQL / T-SQL / LINQ**
 - **HTML & CSS**
