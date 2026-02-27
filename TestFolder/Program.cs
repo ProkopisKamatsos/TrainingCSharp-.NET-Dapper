@@ -1,12 +1,13 @@
-﻿List<int> evenNumbers = [45, 85, 54, 78, 99];
-PrintEvenNumbers(evenNumbers);
-void PrintEvenNumbers(List<int> numbers)
+﻿static int CountChar(string text, char c)
 {
-    foreach (var n in numbers)
+    int counter=0;
+    
+    foreach (char character in text)
     {
-        if (n % 2 == 0)
+        if (character == c)
         {
-            Console.WriteLine(n);
+            counter++;
         }
     }
+    return counter;
 }
