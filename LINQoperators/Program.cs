@@ -61,7 +61,50 @@ using System.Linq;
             //    }
 
             //}
+		//Group by join
+		 // var resultGroup = from emp in employeeList
+        //                   join dept in departmentList
+        //                   on emp.DepartmentId equals dept.Id
+        //                   orderby emp.DepartmentId
+        //                   group emp by new
+        //                   {
+        //                       dept.Id,
+        //                       dept.LongName
+        //                   };
 
+        // foreach (var item in resultGroup)
+        // {
+        //     System.Console.WriteLine($"DepartmentId: {item.Key}");
+        //     foreach (var emp in item)
+        //     {
+        //         System.Console.WriteLine($"{emp.FirstName} belongs to {item.Key.LongName} and paid with {emp.AnnualSalary}");
+        //     }
+        // }
+		  // Group by join method syntax
+        //     var resultGroup = employeeList
+        // .Join(
+        //     departmentList,
+        //     emp => emp.DepartmentId,
+        //     dept => dept.Id,
+        //     (emp, dept) => new { emp, dept }
+        // )
+        // .OrderBy(x => x.emp.DepartmentId)
+        // .GroupBy(
+        //     x => new
+        //     {
+        //         x.dept.Id,
+        //         x.dept.LongName
+        //     },
+        //     x => x.emp
+        // );
+        // foreach (var item in resultGroup)
+        // {
+        //     System.Console.WriteLine($"DepartmentId: {item.Key}");
+        //     foreach (var emp in item)
+        //     {
+        //         System.Console.WriteLine($"{emp.FirstName} belongs to {item.Key.LongName} and paid with {emp.AnnualSalary}");
+        //     }
+        // }
             ////ToLookup Operator
             ////var groupResult = employeeList.OrderBy(o => o.DepartmentId).ToLookup(e => e.DepartmentId);
             //var groupResult = employeeList.ToLookup(e => e.DepartmentId);
@@ -179,7 +222,7 @@ using System.Linq;
 
             ////Single, SingleOrDefault Operators
 
-            var emp = employeeList.SingleOrDefault();
+            var emp = employeeList.Single(e=>e.Id==2);
 
             if (emp != null)
             {

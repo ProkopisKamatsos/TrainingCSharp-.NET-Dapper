@@ -22,6 +22,9 @@ class Program
                              Manager = emp.IsManager,
                              Department = dept.LongName
                          };
+	//var result = employeeList.Join(departmentList, emp => emp.DepartmentId, dept => dept.Id, (emp, dept) =>
+                  //   new { emp.FirstName, emp.LastName, emp.AnnualSalary, dept.ShortName })
+                  //  .Where(e => e.AnnualSalary > 40000m).OrderByDescending(emp => emp.AnnualSalary);
 
         foreach (var employee in resultList)
         {
