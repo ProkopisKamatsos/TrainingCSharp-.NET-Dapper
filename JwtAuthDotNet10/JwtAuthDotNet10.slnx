@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../JwtTutorial/JwtTutorial/JwtTutorial.csproj" />
   <Project Path="JwtAuthDotNet10.csproj" />
 </Solution>
