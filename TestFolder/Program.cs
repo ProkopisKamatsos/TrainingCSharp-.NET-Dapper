@@ -1,10 +1,17 @@
-﻿using System.Collections;
-
-ArrayList list = new ArrayList();
-list.Add(230);
-list.Add("Hello");
-foreach(var item in list)
+﻿void Traverse(Node node)
 {
-    System.Console.WriteLine(item);
+    if (node == null)
+        return;
+
+    Console.WriteLine(node.Value);
+
+    Traverse(node.Left);
+    Traverse(node.Right);
+}
+class Node
+{
+    public int Value;
+    public Node Left;
+    public Node Right;
 }
 

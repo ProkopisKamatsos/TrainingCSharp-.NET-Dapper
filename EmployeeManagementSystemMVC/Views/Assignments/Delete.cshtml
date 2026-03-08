@@ -1,0 +1,35 @@
+﻿@model EmployeeManagementSystemMVC.Models.EmployeeProject
+
+@{
+    ViewData["Title"] = "Remove Assignment";
+}
+
+<h1>Remove Assignment</h1>
+
+<h3>Are you sure you want to remove this assignment?</h3>
+
+<div class="alert alert-warning">
+    This will remove the employee from the selected project.
+</div>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Employee</dt>
+        <dd class="col-sm-10">@Model.Employee?.FirstName @Model.Employee?.LastName</dd>
+
+        <dt class="col-sm-2">Project</dt>
+        <dd class="col-sm-10">@Model.Project?.Name</dd>
+
+        <dt class="col-sm-2">Role</dt>
+        <dd class="col-sm-10">@Model.Role</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="employeeId" value="@Model.EmployeeId" />
+        <input type="hidden" name="projectId" value="@Model.ProjectId" />
+
+        <button type="submit" class="btn btn-danger">Remove</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </form>
+</div>

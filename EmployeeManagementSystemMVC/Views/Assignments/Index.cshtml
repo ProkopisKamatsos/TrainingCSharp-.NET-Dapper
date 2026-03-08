@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EmployeeManagementSystemMVC.Models.EmployeeProject>
+
+@{
+    ViewData["Title"] = "Assignments";
+}
+
+<div class="page-header d-flex justify-content-between align-items-center">
+    <div>
+        <h1 class="mb-1">Assignments</h1>
+        <p class="text-muted mb-0">Manage employee participation and project role assignments.</p>
+    </div>
+</div>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create Assignment</a>
+</p>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Department</th>
+            <th>Project</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Employee?.FirstName @item.Employee?.LastName</td>
+                <td>@item.Employee?.Department?.Name</td>
+                <td>@item.Project?.Name</td>
+                <td>@item.Role</td>
+                <td>
+                    <a asp-action="Delete"
+                       asp-route-employeeId="@item.EmployeeId"
+                       asp-route-projectId="@item.ProjectId">
+                        Remove
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-4">Employee Management System</h1>
+    <p class="lead">
+        A secure internal web application for managing employees, departments, projects, assignments, and salary records.
+    </p>
+    <p class="text-muted">
+        Designed for authenticated business users with role-based access control and operational reporting.
+    </p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Employees</h5>
+                <p class="card-text">
+                    Manage employee records, departments, salary updates, and employment status.
+                </p>
+                <a asp-controller="Employees" asp-action="Index" class="btn btn-primary">Open Employees</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Departments</h5>
+                <p class="card-text">
+                    Maintain department information and review department salary totals.
+                </p>
+                <a asp-controller="Departments" asp-action="Index" class="btn btn-primary">Open Departments</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Projects</h5>
+                <p class="card-text">
+                    Track active projects, timelines, budgets, and employee participation.
+                </p>
+                <a asp-controller="Projects" asp-action="Index" class="btn btn-primary">Open Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Assignments</h5>
+                <p class="card-text">
+                    Assign employees to projects and manage project roles and responsibilities.
+                </p>
+                <a asp-controller="Assignments" asp-action="Index" class="btn btn-primary">Open Assignments</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <div class="card border-0 bg-light">
+        <div class="card-body">
+            <h4 class="card-title">System Features</h4>
+            <ul class="mb-0">
+                <li>Role-based access to management actions</li>
+                <li>Employee search and filtering</li>
+                <li>Department totals reporting</li>
+                <li>Salary update history tracking</li>
+                <li>Secure authentication with Individual Accounts</li>
+            </ul>
+        </div>
+    </div>
+</div>

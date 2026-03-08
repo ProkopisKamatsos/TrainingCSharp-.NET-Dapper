@@ -1,0 +1,47 @@
+﻿@model EmployeeManagementSystemMVC.Models.UpdateSalaryViewModel
+
+@{
+    ViewData["Title"] = "Update Salary";
+}
+
+<h1>Update Salary</h1>
+
+<h4>Employee Salary Update</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="UpdateSalary" method="post">
+            <input type="hidden" asp-for="EmployeeId" />
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label class="form-label">Employee</label>
+                <input class="form-control" value="@Model.EmployeeName" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Current Salary</label>
+                <input class="form-control" value="@Model.CurrentSalary.ToString("0.00")" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="NewSalary" class="form-label"></label>
+                <input asp-for="NewSalary" class="form-control" />
+                <span asp-validation-for="NewSalary" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Update Salary</button>
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

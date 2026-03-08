@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EmployeeManagementSystemMVC.Models.DepartmentTotalsViewModel>
+
+@{
+    ViewData["Title"] = "Department Totals";
+}
+
+<h1>Department Totals</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Total Employees</th>
+            <th>Active Employees</th>
+            <th>Total Salary</th>
+            <th>Average Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DepartmentName</td>
+                <td>@item.TotalEmployees</td>
+                <td>@item.ActiveEmployees</td>
+                <td>@item.TotalSalary.ToString("C")</td>
+                <td>@item.AverageSalary.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Index" class="btn btn-secondary">Back to Departments</a>
+</p>
