@@ -23,6 +23,9 @@ The purpose of this repository is to **learn by doing**, improve my problem-solv
 
 - 🔹 **[TaskManagementAPI](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/TaskManagementAPI)**  
   RESTful Web API for managing tasks using ASP.NET Core.
+
+- 🔹 **[EmployeeManagementSystemMVC](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/EmployeeManagementSystemMVC)**  
+  Full CRUD MVC application using EF core and role based authentication
 ---
 
 ## 🎯 Learning Objectives
