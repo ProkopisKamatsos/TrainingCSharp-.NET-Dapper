@@ -23,6 +23,9 @@ The purpose of this repository is to **learn by doing**, improve my problem-solv
 
 - 🔹 **[TaskManagementAPI](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/TaskManagementAPI)**  
   RESTful Web API for managing tasks using ASP.NET Core.
+
+- 🔹 **[EmployeeManagementSystemMVC](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/EmployeeManagementSystemMVC)**  
+  Full CRUD MVC application using EF core and role based authentication
 ---
 
 ## 🎯 Learning Objectives
@@ -49,6 +52,8 @@ Through this repository, I aim to:
 - Asynchronous programming (`async` / `await`)
 - Basic CRUD operations
 - ASP.NET Core Web APIs
+- MVC (Design pattern) Web applications
+- Role based authentication and authorization 
 - Blazor fundamentals
 - Basic frontend integration (HTML & CSS)
 
@@ -59,9 +64,9 @@ Through this repository, I aim to:
 - **C#**
 - **.NET / .NET Core**
 - **ASP.NET Core / Web API**
-- **Blazor**
+- **MVC / Blazor**
 - **UnitTesting**
-- **ADO.NET & Dapper**
+- **ADO.NET & Dapper/EF core**
 - **SQL / T-SQL / LINQ**
 - **HTML & CSS**
 
