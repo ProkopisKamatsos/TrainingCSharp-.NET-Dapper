@@ -1,0 +1,9 @@
+$kind: collection
+name: Simple Book API
+variables:
+  BaseUrl: ""
+  accessToken: ""
+auth:
+  - id: 3d45a43e-8661-4057-9fb4-6dd08175137b
+    type: apikey
+    name: API Key

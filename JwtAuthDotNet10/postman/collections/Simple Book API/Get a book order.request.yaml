@@ -1,0 +1,11 @@
+$kind: http-request
+name: Get a book order
+url: "{{BaseUrl}}/orders/:orderId"
+method: GET
+pathVariables:
+  orderId: "{{orderId}}"
+auth:
+  credentials:
+    token: "{{accessToken}}"
+  type: bearer
+order: 6636

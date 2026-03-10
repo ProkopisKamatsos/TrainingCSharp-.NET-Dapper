@@ -1,0 +1,20 @@
+$kind: http-request
+name: List of books
+url: "{{BaseUrl}}/books"
+method: GET
+queryParams:
+  - key: type
+    value: fiction
+    disabled: true
+  - key: limit
+    value: "45"
+    disabled: true
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function (){\r
+
+      \    pm.response.to.have.status(200)\r
+
+      })"
+    language: text/javascript
+order: 2000

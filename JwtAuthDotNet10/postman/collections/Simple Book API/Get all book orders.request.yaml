@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get all book orders
+url: "{{BaseUrl}}/orders"
+method: GET
+auth:
+  credentials:
+    token: "{{accessToken}}"
+  type: bearer
+order: 7000

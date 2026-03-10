@@ -1,0 +1,27 @@
+$kind: http-request
+name: Status API
+url: "{{BaseUrl}}/status"
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function (){\r
+
+      \    pm.response.to.have.status(200)\r
+
+      })\r
+
+      \r
+
+      const response = pm.response.json();\r
+
+      console.log(response);\r
+
+      console.log(response.status);\r
+
+      pm.test(\"Status should be OK\", ()=>{\r
+
+      \    pm.expect(response.status).to.eql(\"OK\");\r
+
+      });"
+    language: text/javascript
+order: 1000

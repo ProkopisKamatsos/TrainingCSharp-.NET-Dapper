@@ -1,0 +1,14 @@
+$kind: http-request
+name: Update an order
+url: "{{BaseUrl}}/orders/:orderId"
+method: PATCH
+pathVariables:
+  orderId: "{{orderId}}"
+body:
+  type: json
+  content: ""
+auth:
+  credentials:
+    token: "{{accessToken}}"
+  type: bearer
+order: 2297088678301029

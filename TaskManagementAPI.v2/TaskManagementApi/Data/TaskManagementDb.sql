@@ -1,0 +1,64 @@
+CREATE DATABASE TaskManagementApiDb;
+GO
+
+USE TaskManagementApiDb;
+GO
+
+CREATE TABLE Users (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) NOT NULL UNIQUE,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    FirstName NVARCHAR(50) NULL,
+    LastName NVARCHAR(50) NULL,
+    Role NVARCHAR(20) NOT NULL DEFAULT 'User',
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    IsActive BIT NOT NULL DEFAULT 1
+);
+GO
+
+CREATE TABLE Tasks (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Title NVARCHAR(200) NOT NULL,
+    Description NVARCHAR(MAX) NULL,
+    Status NVARCHAR(20) NOT NULL,
+    Priority INT NOT NULL,
+    UserId INT NOT NULL,
+    DueDate DATETIME2 NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    UpdatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    CompletedAt DATETIME2 NULL,
+    CONSTRAINT CK_Tasks_Status CHECK (Status IN ('Pending', 'InProgress', 'Completed', 'Cancelled')),
+    CONSTRAINT CK_Tasks_Priority CHECK (Priority BETWEEN 1 AND 5),
+    CONSTRAINT FK_Tasks_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
+);
+GO
+
+CREATE TABLE Categories (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL UNIQUE,
+    Color NVARCHAR(20) NULL,
+    Icon NVARCHAR(50) NULL
+);
+GO
+
+CREATE TABLE TaskCategories (
+    TaskId INT NOT NULL,
+    CategoryId INT NOT NULL,
+    CONSTRAINT PK_TaskCategories PRIMARY KEY (TaskId, CategoryId),
+    CONSTRAINT FK_TaskCategories_Tasks FOREIGN KEY (TaskId) REFERENCES Tasks(Id) ON DELETE CASCADE,
+    CONSTRAINT FK_TaskCategories_Categories FOREIGN KEY (CategoryId) REFERENCES Categories(Id) ON DELETE CASCADE
+);
+GO
+
+CREATE TABLE Comments (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    TaskId INT NOT NULL,
+    UserId INT NOT NULL,
+    Content NVARCHAR(MAX) NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT FK_Comments_Tasks FOREIGN KEY (TaskId) REFERENCES Tasks(Id) ON DELETE CASCADE,
+    CONSTRAINT FK_Comments_Users FOREIGN KEY (UserId) REFERENCES Users(Id)
+);
+GO

@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get single book
+url: "{{BaseUrl}}/books/:Id"
+method: GET
+pathVariables:
+  Id: "2"
+order: 4000
