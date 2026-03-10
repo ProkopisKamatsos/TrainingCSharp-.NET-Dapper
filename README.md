@@ -60,6 +60,7 @@ Through this repository, I aim to:
 - Role based authentication and authorization 
 - Blazor fundamentals
 - Basic frontend integration (HTML & CSS)
+- JWT Authentication & Authorization
 
 ---
 
@@ -69,7 +70,7 @@ Through this repository, I aim to:
 - **.NET / .NET Core**
 - **ASP.NET Core / Web API**
 - **MVC / Blazor**
-- **UnitTesting**
+- **Authentication & Authorization/UnitTesting**
 - **ADO.NET & Dapper/EF core**
 - **SQL / T-SQL / LINQ**
 - **HTML & CSS**
