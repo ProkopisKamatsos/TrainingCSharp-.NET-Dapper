@@ -26,6 +26,10 @@ The purpose of this repository is to **learn by doing**, improve my problem-solv
 
 - 🔹 **[EmployeeManagementSystemMVC](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/EmployeeManagementSystemMVC)**  
   Full CRUD MVC application using EF core and role based authentication
+- 🔹 **[TaskManagementAPI.v2](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/TaskManagementAPI.v2)**  
+  CRUD-based REST API project, with the goal of applying proper authentication and authorization practices in a more realistic API architecture
+  using Dapper, SQL Server, and JWT Authentication
+
 ---
 
 ## 🎯 Learning Objectives
