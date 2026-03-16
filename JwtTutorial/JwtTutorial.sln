@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtTutorial", "JwtTutorial\JwtTutorial.csproj", "{9B1EB93C-5F63-0D22-18C7-3E30E1E0C236}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "..\ContosoUniversity\ContosoUniversity\ContosoUniversity.csproj", "{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,18 +27,6 @@ Global
 		{9B1EB93C-5F63-0D22-18C7-3E30E1E0C236}.Release|x64.Build.0 = Release|Any CPU
 		{9B1EB93C-5F63-0D22-18C7-3E30E1E0C236}.Release|x86.ActiveCfg = Release|Any CPU
 		{9B1EB93C-5F63-0D22-18C7-3E30E1E0C236}.Release|x86.Build.0 = Release|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Debug|x64.Build.0 = Debug|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Debug|x86.Build.0 = Debug|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Release|x64.ActiveCfg = Release|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Release|x64.Build.0 = Release|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Release|x86.ActiveCfg = Release|Any CPU
-		{4D019F3E-B2FF-44D2-BFA1-93BFC2CAB077}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
