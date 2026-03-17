@@ -1,0 +1,6 @@
+@JwtBasedAuth_CodeHub_HostAddress = http://localhost:5223
+
+GET {{JwtBasedAuth_CodeHub_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
