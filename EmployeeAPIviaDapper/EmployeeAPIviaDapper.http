@@ -1,0 +1,6 @@
+@EmployeeAPIviaDapper_HostAddress = http://localhost:5210
+
+GET {{EmployeeAPIviaDapper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
