@@ -1,8 +1,8 @@
-﻿
-int a, b, c, x;
-a = 90;
-b = 15;
-c = 3;
-x = a - b / 3 + c * 2 - 1;
-Console.WriteLine(x);
-
+﻿List<int> DuplicateNumbers(List<int> numbers)
+{
+    var duplicates = numbers.GroupBy(x => x)
+                            .Where(g => g.Count() > 1)
+                            .Select(g => g.Key)
+                            .ToList();
+    return duplicates;
+}
