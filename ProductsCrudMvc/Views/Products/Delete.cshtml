@@ -1,0 +1,39 @@
+@model ProductsCrudMvc.Models.Product
+@{
+    ViewData["Title"] = "Διαγραφή - " + Model.Name;
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow border-danger">
+            <div class="card-header bg-danger text-white">
+                <h5 class="mb-0">Επιβεβαίωση Διαγραφής</h5>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning">
+                    Είσαι σίγουρος ότι θέλεις να διαγράψεις το προϊόν <strong>@Model.Name</strong>;
+                    Αυτή η ενέργεια δεν αναιρείται.
+                </div>
+
+                <dl class="row">
+                    <dt class="col-sm-4">Όνομα</dt>
+                    <dd class="col-sm-8">@Model.Name</dd>
+
+                    <dt class="col-sm-4">Κατηγορία</dt>
+                    <dd class="col-sm-8">@Model.Category</dd>
+
+                    <dt class="col-sm-4">Τιμή</dt>
+                    <dd class="col-sm-8">@Model.Price.ToString("C", new System.Globalization.CultureInfo("el-GR"))</dd>
+                </dl>
+
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-danger">Ναι, Διαγραφή</button>
+                        <a asp-action="Index" class="btn btn-outline-secondary">Άκυρο</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

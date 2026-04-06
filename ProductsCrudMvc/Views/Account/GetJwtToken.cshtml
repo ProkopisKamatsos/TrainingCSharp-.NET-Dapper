@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "JWT Token";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Το JWT Token σου</h5>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small">Χρησιμοποίησε αυτό το token για API κλήσεις με <code>Authorization: Bearer {token}</code></p>
+                <textarea class="form-control font-monospace" rows="6" readonly>@ViewBag.Token</textarea>
+                <button class="btn btn-outline-dark btn-sm mt-2"
+                        onclick="navigator.clipboard.writeText(document.querySelector('textarea').value); this.textContent='Αντιγράφηκε!'">
+                    Αντιγραφή
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

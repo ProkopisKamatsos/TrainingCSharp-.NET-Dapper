@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Αρχική";
+}
+
+<div class="text-center py-5">
+    <h1 class="display-4 fw-bold">Products CRUD</h1>
+    <p class="lead text-muted">ASP.NET Core MVC · Identity · JWT · EF Core · SQL Server</p>
+    <hr class="my-4" />
+    <div class="d-flex justify-content-center gap-3">
+        <a asp-controller="Products" asp-action="Index" class="btn btn-dark btn-lg">Δες τα Προϊόντα</a>
+        @if (!User.Identity!.IsAuthenticated)
+        {
+            <a asp-controller="Account" asp-action="Register" class="btn btn-outline-dark btn-lg">Εγγραφή</a>
+        }
+    </div>
+</div>
+
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5>Εγγραφή / Σύνδεση</h5>
+                <p class="text-muted">ASP.NET Core Identity με roles Admin & User</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5>Full CRUD</h5>
+                <p class="text-muted">Δημιουργία, ανάγνωση, ενημέρωση, διαγραφή προϊόντων</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5>JWT Token</h5>
+                <p class="text-muted">Παράγεις JWT token για API κλήσεις μετά τη σύνδεση</p>
+            </div>
+        </div>
+    </div>
+</div>
