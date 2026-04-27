@@ -46,7 +46,7 @@ The main goals of this project are to:
  
 - **C#**
 - **ASP.NET Core Web API**
-- **.NET 9**
+- **.NET 10**
 - **SQL Server**
 - **Dapper**
 - **JWT Bearer Authentication**
