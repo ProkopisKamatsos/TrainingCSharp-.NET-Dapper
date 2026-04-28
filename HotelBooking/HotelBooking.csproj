@@ -18,7 +18,12 @@
     <Folder Include="Controllers\" />
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\Auth\" />
+    <Folder Include="DTOs\Booking\" />
     <Folder Include="DTOs\Hotel\" />
+    <Folder Include="DTOs\Payment\" />
+    <Folder Include="DTOs\Review\" />
+    <Folder Include="DTOs\RoomType\" />
+    <Folder Include="DTOs\Room\" />
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
     <Folder Include="Repositories\" />
