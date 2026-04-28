@@ -38,9 +38,6 @@ namespace HotelBooking.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var hotel = await _hotelService.GetByIdAsync(id);
-            if (hotel == null)
-                return NotFound(new { message = "Το hotel δεν βρέθηκε." });
-
             return Ok(hotel);
         }
 
@@ -69,22 +66,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,HotelManager")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateHotelDto dto)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                await _hotelService.UpdateAsync(id, requestingUserId, requestingUserRole, dto);
-                return NoContent();
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            await _hotelService.UpdateAsync(id, requestingUserId, requestingUserRole, dto);
+            return NoContent();
         }
 
         // DELETE api/hotels/5
@@ -92,22 +78,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,HotelManager")]
         public async Task<IActionResult> SoftDelete(int id)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                await _hotelService.SoftDeleteAsync(id, requestingUserId, requestingUserRole);
-                return NoContent();
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            await _hotelService.SoftDeleteAsync(id, requestingUserId, requestingUserRole);
+            return NoContent();
         }
     }
 }

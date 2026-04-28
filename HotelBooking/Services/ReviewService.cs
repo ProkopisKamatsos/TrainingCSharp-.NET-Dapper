@@ -31,7 +31,7 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει το booking
             var booking = await _bookingRepository.GetByIdAsync(dto.BookingId);
             if (booking == null)
-                throw new Exception("Το booking δεν βρέθηκε.");
+                throw new KeyNotFoundException("Booking not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "Guest" && booking.UserId != requestingUserId)
@@ -39,12 +39,12 @@ namespace HotelBooking.Services
 
             // Το booking πρέπει να είναι Completed
             if (booking.Status != "Completed")
-                throw new Exception("Μπορείτε να κάνετε review μόνο για ολοκληρωμένες κρατήσεις.");
+                throw new ArgumentException("You can only review completed bookings.");
 
             // Ελέγχουμε αν υπάρχει ήδη review για αυτό το booking
             var existingReview = await _reviewRepository.GetByBookingIdAsync(dto.BookingId);
             if (existingReview != null)
-                throw new Exception("Έχετε ήδη κάνει review για αυτό το booking.");
+                throw new ArgumentException("You have already submitted a review for this booking.");
 
             // Παίρνουμε το HotelId από το Room του Booking
             var room = await _roomRepository.GetByIdAsync(booking.RoomId);

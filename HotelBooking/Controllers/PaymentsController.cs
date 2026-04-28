@@ -23,21 +23,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> GetById(int id)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                var payment = await _paymentService.GetByIdAsync(id, requestingUserId, requestingUserRole);
-                if (payment == null)
-                    return NotFound(new { message = "Το payment δεν βρέθηκε." });
-
-                return Ok(payment);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
+            var payment = await _paymentService.GetByIdAsync(id, requestingUserId, requestingUserRole);
+            return Ok(payment);
         }
 
         // GET api/payments/booking/1
@@ -45,21 +35,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> GetByBookingId(int bookingId)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                var payment = await _paymentService.GetByBookingIdAsync(bookingId, requestingUserId, requestingUserRole);
-                if (payment == null)
-                    return NotFound(new { message = "Το payment δεν βρέθηκε." });
-
-                return Ok(payment);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
+            var payment = await _paymentService.GetByBookingIdAsync(bookingId, requestingUserId, requestingUserRole);
+            return Ok(payment);
         }
 
         // POST api/payments
@@ -67,22 +47,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> Create([FromBody] CreatePaymentDto dto)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                var payment = await _paymentService.CreateAsync(requestingUserId, requestingUserRole, dto);
-                return CreatedAtAction(nameof(GetById), new { id = payment.Id }, payment);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            var payment = await _paymentService.CreateAsync(requestingUserId, requestingUserRole, dto);
+            return CreatedAtAction(nameof(GetById), new { id = payment.Id }, payment);
         }
     }
 }

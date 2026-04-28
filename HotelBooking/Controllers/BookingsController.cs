@@ -33,21 +33,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> GetById(int id)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                var booking = await _bookingService.GetByIdAsync(id, requestingUserId, requestingUserRole);
-                if (booking == null)
-                    return NotFound(new { message = "Το booking δεν βρέθηκε." });
-
-                return Ok(booking);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
+            var booking = await _bookingService.GetByIdAsync(id, requestingUserId, requestingUserRole);
+            return Ok(booking);
         }
 
         // POST api/bookings
@@ -55,16 +45,9 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> Create([FromBody] CreateBookingDto dto)
         {
-            try
-            {
-                var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var booking = await _bookingService.CreateAsync(userId, dto);
-                return CreatedAtAction(nameof(GetById), new { id = booking.Id }, booking);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var booking = await _bookingService.CreateAsync(userId, dto);
+            return CreatedAtAction(nameof(GetById), new { id = booking.Id }, booking);
         }
 
         // PUT api/bookings/5/cancel
@@ -72,22 +55,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> Cancel(int id)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                await _bookingService.CancelAsync(id, requestingUserId, requestingUserRole);
-                return NoContent();
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            await _bookingService.CancelAsync(id, requestingUserId, requestingUserRole);
+            return NoContent();
         }
     }
 }

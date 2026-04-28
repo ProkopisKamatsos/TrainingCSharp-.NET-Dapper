@@ -21,10 +21,11 @@ namespace HotelBooking.Services
             return roomTypes.Select(MapToDto);
         }
 
-        public async Task<RoomTypeResponseDto?> GetByIdAsync(int id)
+        public async Task<RoomTypeResponseDto> GetByIdAsync(int id)
         {
             var roomType = await _roomTypeRepository.GetByIdAsync(id);
-            if (roomType == null) return null;
+            if (roomType == null)
+                throw new KeyNotFoundException("RoomType not found.");
             return MapToDto(roomType);
         }
 
@@ -33,7 +34,7 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει το hotel
             var hotel = await _hotelRepository.GetByIdAsync(dto.HotelId);
             if (hotel == null)
-                throw new Exception("Το hotel δεν βρέθηκε.");
+                throw new KeyNotFoundException("Hotel not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "HotelManager" && hotel.OwnerId != requestingUserId)
@@ -59,7 +60,7 @@ namespace HotelBooking.Services
         {
             var roomType = await _roomTypeRepository.GetByIdAsync(roomTypeId);
             if (roomType == null)
-                throw new Exception("Το RoomType δεν βρέθηκε.");
+                throw new KeyNotFoundException("RoomType not found.");
 
             // Φέρνουμε το hotel για να ελέγξουμε ownership
             var hotel = await _hotelRepository.GetByIdAsync(roomType.HotelId);
@@ -83,7 +84,7 @@ namespace HotelBooking.Services
         {
             var roomType = await _roomTypeRepository.GetByIdAsync(roomTypeId);
             if (roomType == null)
-                throw new Exception("Το RoomType δεν βρέθηκε.");
+                throw new KeyNotFoundException("RoomType not found.");
 
             // Φέρνουμε το hotel για να ελέγξουμε ownership
             var hotel = await _hotelRepository.GetByIdAsync(roomType.HotelId);

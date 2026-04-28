@@ -21,20 +21,21 @@ namespace HotelBooking.Services
             return rooms.Select(MapToDto);
         }
 
-        public async Task<RoomResponseDto?> GetByIdAsync(int id)
+        public async Task<RoomResponseDto> GetByIdAsync(int id)
         {
             var room = await _roomRepository.GetByIdAsync(id);
-            if (room == null) return null;
+            if (room == null)
+                throw new KeyNotFoundException("Room not found.");
             return MapToDto(room);
         }
 
         public async Task<IEnumerable<RoomResponseDto>> GetAvailableRoomsAsync(int hotelId, DateOnly checkIn, DateOnly checkOut)
         {
             if (checkIn >= checkOut)
-                throw new Exception("Η ημερομηνία CheckIn πρέπει να είναι πριν το CheckOut.");
+                throw new ArgumentException("CheckIn date must be before CheckOut date.");
 
             if (checkIn < DateOnly.FromDateTime(DateTime.UtcNow))
-                throw new Exception("Η ημερομηνία CheckIn δεν μπορεί να είναι στο παρελθόν.");
+                throw new ArgumentException("CheckIn date cannot be in the past.");
 
             var rooms = await _roomRepository.GetAvailableRoomsAsync(hotelId, checkIn, checkOut);
             return rooms.Select(MapToDto);
@@ -45,7 +46,7 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει το hotel
             var hotel = await _hotelRepository.GetByIdAsync(dto.HotelId);
             if (hotel == null)
-                throw new Exception("Το hotel δεν βρέθηκε.");
+                throw new KeyNotFoundException("Hotel not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "HotelManager" && hotel.OwnerId != requestingUserId)
@@ -67,7 +68,7 @@ namespace HotelBooking.Services
         {
             var room = await _roomRepository.GetByIdAsync(roomId);
             if (room == null)
-                throw new Exception("Το δωμάτιο δεν βρέθηκε.");
+                throw new KeyNotFoundException("Room not found.");
 
             // Φέρνουμε το hotel για να ελέγξουμε ownership
             var hotel = await _hotelRepository.GetByIdAsync(room.HotelId);
@@ -87,7 +88,7 @@ namespace HotelBooking.Services
         {
             var room = await _roomRepository.GetByIdAsync(roomId);
             if (room == null)
-                throw new Exception("Το δωμάτιο δεν βρέθηκε.");
+                throw new KeyNotFoundException("Room not found.");
 
             // Φέρνουμε το hotel για να ελέγξουμε ownership
             var hotel = await _hotelRepository.GetByIdAsync(room.HotelId);

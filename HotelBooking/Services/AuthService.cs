@@ -22,7 +22,7 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει ήδη user με αυτό το email
             var existingUser = await _userRepository.GetByEmailAsync(dto.Email);
             if (existingUser != null)
-                throw new Exception("Υπάρχει ήδη λογαριασμός με αυτό το email.");
+                throw new ArgumentException("An account with this email already exists.");
 
             // Δημιουργούμε τον νέο user
             var user = new User
@@ -51,11 +51,11 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει ο user
             var user = await _userRepository.GetByEmailAsync(dto.Email);
             if (user == null)
-                throw new Exception("Λανθασμένα στοιχεία σύνδεσης.");
+                throw new ArgumentException("Invalid credentials.");
 
             // Ελέγχουμε το password
             if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
-                throw new Exception("Λανθασμένα στοιχεία σύνδεσης.");
+                throw new ArgumentException("Invalid credentials.");
 
             return new AuthResponseDto
             {

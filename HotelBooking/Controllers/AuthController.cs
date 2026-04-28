@@ -18,29 +18,15 @@ namespace HotelBooking.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto dto)
         {
-            try
-            {
-                var response = await _authService.RegisterAsync(dto);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            var response = await _authService.RegisterAsync(dto);
+            return Ok(response);
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
-            try
-            {
-                var response = await _authService.LoginAsync(dto);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            var response = await _authService.LoginAsync(dto);
+            return Ok(response);
         }
     }
 }

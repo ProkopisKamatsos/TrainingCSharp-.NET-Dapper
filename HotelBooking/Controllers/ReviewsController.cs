@@ -32,22 +32,11 @@ namespace HotelBooking.Controllers
         [Authorize(Roles = "Admin,Guest")]
         public async Task<IActionResult> Create([FromBody] CreateReviewDto dto)
         {
-            try
-            {
-                var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-                var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
+            var requestingUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            var requestingUserRole = User.FindFirstValue(ClaimTypes.Role)!;
 
-                var review = await _reviewService.CreateAsync(requestingUserId, requestingUserRole, dto);
-                return CreatedAtAction(nameof(GetByHotelId), new { hotelId = review.HotelId }, review);
-            }
-            catch (UnauthorizedAccessException)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            var review = await _reviewService.CreateAsync(requestingUserId, requestingUserRole, dto);
+            return CreatedAtAction(nameof(GetByHotelId), new { hotelId = review.HotelId }, review);
         }
     }
 }

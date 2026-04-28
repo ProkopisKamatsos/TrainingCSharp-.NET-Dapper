@@ -20,10 +20,11 @@ namespace HotelBooking.Services
             _roomTypeRepository = roomTypeRepository;
         }
 
-        public async Task<BookingResponseDto?> GetByIdAsync(int bookingId, int requestingUserId, string requestingUserRole)
+        public async Task<BookingResponseDto> GetByIdAsync(int bookingId, int requestingUserId, string requestingUserRole)
         {
             var booking = await _bookingRepository.GetByIdAsync(bookingId);
-            if (booking == null) return null;
+            if (booking == null)
+                throw new KeyNotFoundException("Booking not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "Guest" && booking.UserId != requestingUserId)
@@ -43,19 +44,19 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει το room
             var room = await _roomRepository.GetByIdAsync(dto.RoomId);
             if (room == null)
-                throw new Exception("Το δωμάτιο δεν βρέθηκε.");
+                throw new KeyNotFoundException("Room not found.");
 
             // Ελέγχουμε τις ημερομηνίες
             if (dto.CheckIn >= dto.CheckOut)
-                throw new Exception("Η ημερομηνία CheckIn πρέπει να είναι πριν το CheckOut.");
+                throw new ArgumentException("CheckIn date must be before CheckOut date.");
 
             if (dto.CheckIn < DateOnly.FromDateTime(DateTime.UtcNow))
-                throw new Exception("Η ημερομηνία CheckIn δεν μπορεί να είναι στο παρελθόν.");
+                throw new ArgumentException("CheckIn date cannot be in the past.");
 
             // Ελέγχουμε διαθεσιμότητα
             var hasOverlap = await _bookingRepository.HasOverlapAsync(dto.RoomId, dto.CheckIn, dto.CheckOut);
             if (hasOverlap)
-                throw new Exception("Το δωμάτιο δεν είναι διαθέσιμο για τις συγκεκριμένες ημερομηνίες.");
+                throw new ArgumentException("The room is not available for the selected dates.");
 
             // Υπολογισμός TotalPrice
             var roomType = await _roomTypeRepository.GetByIdAsync(room.RoomTypeId);
@@ -82,17 +83,17 @@ namespace HotelBooking.Services
         {
             var booking = await _bookingRepository.GetByIdAsync(bookingId);
             if (booking == null)
-                throw new Exception("Το booking δεν βρέθηκε.");
+                throw new KeyNotFoundException("Booking not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "Guest" && booking.UserId != requestingUserId)
                 throw new UnauthorizedAccessException("Δεν έχετε δικαίωμα να ακυρώσετε αυτό το booking.");
 
             if (booking.Status == "Cancelled")
-                throw new Exception("Το booking είναι ήδη ακυρωμένο.");
+                throw new ArgumentException("Booking is already cancelled.");
 
             if (booking.Status == "Completed")
-                throw new Exception("Δεν μπορείτε να ακυρώσετε ένα ολοκληρωμένο booking.");
+                throw new ArgumentException("A completed booking cannot be cancelled.");
 
             await _bookingRepository.CancelAsync(bookingId);
         }

@@ -15,10 +15,11 @@ namespace HotelBooking.Services
             _bookingRepository = bookingRepository;
         }
 
-        public async Task<PaymentResponseDto?> GetByIdAsync(int paymentId, int requestingUserId, string requestingUserRole)
+        public async Task<PaymentResponseDto> GetByIdAsync(int paymentId, int requestingUserId, string requestingUserRole)
         {
             var payment = await _paymentRepository.GetByIdAsync(paymentId);
-            if (payment == null) return null;
+            if (payment == null)
+                throw new KeyNotFoundException("Payment not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "Guest")
@@ -31,18 +32,20 @@ namespace HotelBooking.Services
             return MapToDto(payment);
         }
 
-        public async Task<PaymentResponseDto?> GetByBookingIdAsync(int bookingId, int requestingUserId, string requestingUserRole)
+        public async Task<PaymentResponseDto> GetByBookingIdAsync(int bookingId, int requestingUserId, string requestingUserRole)
         {
             // Ελέγχουμε αν υπάρχει το booking
             var booking = await _bookingRepository.GetByIdAsync(bookingId);
-            if (booking == null) return null;
+            if (booking == null)
+                throw new KeyNotFoundException("Booking not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "Guest" && booking.UserId != requestingUserId)
                 throw new UnauthorizedAccessException("Δεν έχετε δικαίωμα να δείτε αυτό το payment.");
 
             var payment = await _paymentRepository.GetByBookingIdAsync(bookingId);
-            if (payment == null) return null;
+            if (payment == null)
+                throw new KeyNotFoundException("Payment not found.");
 
             return MapToDto(payment);
         }
@@ -52,7 +55,7 @@ namespace HotelBooking.Services
             // Ελέγχουμε αν υπάρχει το booking
             var booking = await _bookingRepository.GetByIdAsync(dto.BookingId);
             if (booking == null)
-                throw new Exception("Το booking δεν βρέθηκε.");
+                throw new KeyNotFoundException("Booking not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "Guest" && booking.UserId != requestingUserId)
@@ -60,15 +63,15 @@ namespace HotelBooking.Services
 
             // Business rules
             if (booking.Status == "Cancelled")
-                throw new Exception("Δεν μπορείτε να πληρώσετε ένα ακυρωμένο booking.");
+                throw new ArgumentException("Cannot pay for a cancelled booking.");
 
             if (booking.Status == "Completed")
-                throw new Exception("Αυτό το booking έχει ήδη ολοκληρωθεί.");
+                throw new ArgumentException("This booking has already been completed.");
 
             // Ελέγχουμε αν υπάρχει ήδη payment
             var existingPayment = await _paymentRepository.GetByBookingIdAsync(dto.BookingId);
             if (existingPayment != null)
-                throw new Exception("Αυτό το booking έχει ήδη πληρωθεί.");
+                throw new ArgumentException("This booking has already been paid.");
 
             var payment = new Payment
             {

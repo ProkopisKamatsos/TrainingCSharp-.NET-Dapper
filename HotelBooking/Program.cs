@@ -1,6 +1,7 @@
 using System.Text;
 using HotelBooking.Data;
 using HotelBooking.Helpers;
+using HotelBooking.Middleware;
 using HotelBooking.Repositories;
 using HotelBooking.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -63,6 +64,8 @@ builder.Services.AddAuthentication(options =>
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();

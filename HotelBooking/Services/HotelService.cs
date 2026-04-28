@@ -19,10 +19,11 @@ namespace HotelBooking.Services
             return hotels.Select(MapToDto);
         }
 
-        public async Task<HotelResponseDto?> GetByIdAsync(int id)
+        public async Task<HotelResponseDto> GetByIdAsync(int id)
         {
             var hotel = await _hotelRepository.GetByIdAsync(id);
-            if (hotel == null) return null;
+            if (hotel == null)
+                throw new KeyNotFoundException("Hotel not found.");
             return MapToDto(hotel);
         }
 
@@ -59,7 +60,7 @@ namespace HotelBooking.Services
         {
             var hotel = await _hotelRepository.GetByIdAsync(hotelId);
             if (hotel == null)
-                throw new Exception("Το hotel δεν βρέθηκε.");
+                throw new KeyNotFoundException("Hotel not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "HotelManager" && hotel.OwnerId != requestingUserId)
@@ -82,7 +83,7 @@ namespace HotelBooking.Services
         {
             var hotel = await _hotelRepository.GetByIdAsync(hotelId);
             if (hotel == null)
-                throw new Exception("Το hotel δεν βρέθηκε.");
+                throw new KeyNotFoundException("Hotel not found.");
 
             // Resource-level authorization
             if (requestingUserRole == "HotelManager" && hotel.OwnerId != requestingUserId)
