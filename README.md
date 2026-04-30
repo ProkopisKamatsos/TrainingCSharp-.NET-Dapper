@@ -25,6 +25,8 @@ The purpose of this repository is to **learn by doing**, improve my problem-solv
 
 - 🔹 **[HotelBooking](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/HotelBooking)**  
   Enterprise-level multi-tenant Hotel Booking Platform REST API. Supports role-based and resource-level authorization, pagination, filtering, and a full booking lifecycle (Hotels → Rooms → Bookings → Payments → Reviews) using Dapper, SQL Server, and JWT Authentication.
+- 🔹 **[BankingApi](https://github.com/ProkopisKamatsos/TrainingCSharp-.NET-Dapper/tree/main/BankingApi)**  
+  Enterprise-level Banking REST API with JWT authentication, resource-level authorization, and atomic SQL transactions for deposits, withdrawals, and transfers. Built with ASP.NET Core, Dapper, SQL Server, FluentValidation, and Serilog.
 
 ---
 ## 🎯 Learning Objectives
