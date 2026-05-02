@@ -46,25 +46,27 @@ public class AccountRepository : IAccountRepository
         return await connection.ExecuteScalarAsync<int>(sql, account);
     }
 
-    public async Task UpdateBalanceAsync(int accountId, decimal newBalance)
+    public async Task CreditAsync(int accountId, decimal amount, SqlConnection connection, SqlTransaction sqlTransaction)
     {
-        using var connection = _connectionFactory.Create();
         const string sql = @"
             UPDATE Accounts
-            SET Balance = @NewBalance, UpdatedAt = GETUTCDATE()
-            WHERE AccountId = @AccountId";
+            SET Balance = Balance + @Amount, UpdatedAt = GETUTCDATE()
+            WHERE AccountId = @AccountId AND IsActive = 1";
 
-        await connection.ExecuteAsync(sql, new { AccountId = accountId, NewBalance = newBalance });
+        await connection.ExecuteAsync(sql, new { AccountId = accountId, Amount = amount }, sqlTransaction);
     }
 
-    public async Task UpdateBalanceAsync(int accountId, decimal newBalance, SqlConnection connection, SqlTransaction sqlTransaction)
+    public async Task DebitAsync(int accountId, decimal amount, SqlConnection connection, SqlTransaction sqlTransaction)
     {
         const string sql = @"
             UPDATE Accounts
-            SET Balance = @NewBalance, UpdatedAt = GETUTCDATE()
-            WHERE AccountId = @AccountId";
+            SET Balance = Balance - @Amount, UpdatedAt = GETUTCDATE()
+            WHERE AccountId = @AccountId AND Balance >= @Amount AND IsActive = 1";
 
-        await connection.ExecuteAsync(sql, new { AccountId = accountId, NewBalance = newBalance }, sqlTransaction);
+        var rows = await connection.ExecuteAsync(sql, new { AccountId = accountId, Amount = amount }, sqlTransaction);
+
+        if (rows == 0)
+            throw new InvalidOperationException("Insufficient funds or account not found.");
     }
 
     public async Task DeactivateAsync(int accountId)

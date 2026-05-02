@@ -43,7 +43,7 @@ public class TransactionService : ITransactionService
         try
         {
             // 1. Ενημέρωση balance
-            await _accountRepository.UpdateBalanceAsync(dto.ToAccountId, account.Balance + dto.Amount, connection, sqlTransaction!);
+            await _accountRepository.CreditAsync(dto.ToAccountId, dto.Amount, connection, sqlTransaction!);
 
             // 2. Καταγραφή transaction
             var transaction = new Transaction
@@ -86,9 +86,6 @@ public class TransactionService : ITransactionService
         if (account.CustomerId != customerId)
             throw new UnauthorizedAccessException("Access denied.");
 
-        if (account.Balance < dto.Amount)
-            throw new InvalidOperationException("Insufficient funds.");
-
         using var connection = _connectionFactory.Create();
         await connection.OpenAsync();
         using var sqlTransaction = await connection.BeginTransactionAsync() as Microsoft.Data.SqlClient.SqlTransaction;
@@ -96,7 +93,7 @@ public class TransactionService : ITransactionService
         try
         {
             // 1. Ενημέρωση balance
-            await _accountRepository.UpdateBalanceAsync(dto.FromAccountId, account.Balance - dto.Amount, connection, sqlTransaction!);
+            await _accountRepository.DebitAsync(dto.FromAccountId, dto.Amount, connection, sqlTransaction!);
 
             // 2. Καταγραφή transaction
             var transaction = new Transaction
@@ -144,9 +141,6 @@ public class TransactionService : ITransactionService
         if (fromAccount.CustomerId != customerId)
             throw new UnauthorizedAccessException("Access denied.");
 
-        if (fromAccount.Balance < dto.Amount)
-            throw new InvalidOperationException("Insufficient funds.");
-
         using var connection = _connectionFactory.Create();
         await connection.OpenAsync();
         using var sqlTransaction = await connection.BeginTransactionAsync() as Microsoft.Data.SqlClient.SqlTransaction;
@@ -154,10 +148,10 @@ public class TransactionService : ITransactionService
         try
         {
             // 1. Αφαίρεση από αποστολέα
-            await _accountRepository.UpdateBalanceAsync(dto.FromAccountId, fromAccount.Balance - dto.Amount, connection, sqlTransaction!);
+            await _accountRepository.DebitAsync(dto.FromAccountId, dto.Amount, connection, sqlTransaction!);
 
             // 2. Πρόσθεση στον παραλήπτη
-            await _accountRepository.UpdateBalanceAsync(dto.ToAccountId, toAccount.Balance + dto.Amount, connection, sqlTransaction!);
+            await _accountRepository.CreditAsync(dto.ToAccountId, dto.Amount, connection, sqlTransaction!);
 
             // 3. Καταγραφή transaction
             var transaction = new Transaction
